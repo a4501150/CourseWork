@@ -1,0 +1,19 @@
+/**
+ * 
+ */
+package midtem;
+
+/**
+ * @author lijinyang
+ *
+ */
+public class Fraction {
+
+	/**
+	 * 
+	 */
+	public Fraction() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

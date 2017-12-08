@@ -1,0 +1,67 @@
+package cs430;
+
+import java.util.*;
+
+public class cupGame {
+
+	static Vector <cup>cups= new Vector<cup>();
+	
+	public static void main(String[] args) {
+		
+		Scanner in = new Scanner(System.in);
+		
+		System.out.println("please entry the cup size u from samll to big , split by ,");
+		String target_water = in.nextLine();
+		System.out.println("please entry the target water u want");
+		int target = in.nextInt();
+		
+		String[] input = target_water.split(",");
+		int cups_amount = input.length;
+		
+		
+		for (int i = 0; i < cups_amount; i++) {
+			cups.add(new cup(Integer.parseInt(input[i])));
+		}
+		
+		cups.lastElement().fillful();
+		
+		//杯子生成完毕
+		
+		cupGame game = new cupGame();
+		
+		//开始搜寻需要的杯子
+		game.beginGivingWater(target);
+
+	}
+	
+	public void beginGivingWater(int target) {
+		
+		//循环1
+		for(int i=0; i < cups.size() - 1; i++) {
+			
+			cups.lastElement().giveWater(cups.get(i));
+			
+			if(checkTarget(target))
+				break; //如果当前的杯子水已经达到目标，则退出当前循环（循环 1）
+			
+		}
+		
+		
+		
+		
+
+	}
+	
+	public boolean checkTarget(int target) {
+		
+		cup tmp = new cup();
+		tmp.water = target;
+		
+		if(cups.contains(tmp))
+			return true;
+		return false;
+		
+	}
+	
+
+}

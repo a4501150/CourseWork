@@ -1,0 +1,26 @@
+package cs430;
+
+import java.util.*;
+
+public class Node {
+	
+    Vector cups;
+    Node previos;
+    Node nextState;
+    
+
+    Node (Vector cups, Node previous) {
+       this.x = x;
+       this.y = y;
+       this.parent = parent;
+    }
+
+    public String toString() {
+       return(x + " " + y);
+    }
+
+    public boolean equals(Object node) { /* argument has to be an Object */
+       return(((Node)node).x == x && ((Node)node).y == y);
+    }
+
+}

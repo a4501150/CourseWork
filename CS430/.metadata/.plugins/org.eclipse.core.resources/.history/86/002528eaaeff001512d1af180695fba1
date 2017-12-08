@@ -1,0 +1,17 @@
+package cs430;
+
+public class cup {
+
+	int volume;
+	int water;
+	
+	public cup(int volume) {
+		
+		this.volume = volume;
+		this.water = 0;
+		
+	}
+	
+	
+	
+}

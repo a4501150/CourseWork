@@ -1,0 +1,29 @@
+package cs430;
+
+import java.util.*;
+
+public class cupGame {
+
+	 ArrayList <cup>cups;
+	
+	public static void main(String[] args) {
+		
+		Scanner in = new Scanner(System.in);
+		System.out.println("please entry the cup size u from samll to big , split by ,");
+		String a = in.nextLine();
+		System.out.println("please entry the target u want");
+		int t = in.nextInt();
+		
+		String[] ss = a.split(",");
+		int size = ss.length;
+		int[] cups = new int[size];
+		for (int i = 0; i < size; i++) {
+			cups[i] = Integer.parseInt(ss[i]);
+		}
+		
+
+	}
+	
+	
+
+}

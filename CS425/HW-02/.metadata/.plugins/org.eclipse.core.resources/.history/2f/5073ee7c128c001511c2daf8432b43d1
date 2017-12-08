@@ -1,0 +1,51 @@
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.Vector;
+
+
+public class q5 {
+	
+    Statement stmt = null;
+    ResultSet result = null;
+	Connection con = null;
+    static Vector<String> status;
+
+	public q5(Connection con) throws SQLException {
+		
+		getStatusVe();
+		
+		this.con = con;
+		
+		System.out.println("Which status reward rates u wanna modify? \n");
+		for (String i : status) {
+			
+			System.out.print(i+ " ");
+			
+		}
+		
+		
+		
+	}
+
+	void getStatusVe() throws SQLException{
+		
+		
+		String sql = "select name from STATUS_POINTS_RATE";
+	    stmt = con.createStatement();
+	    result = stmt.executeQuery(sql);
+		while (result.next()) 
+			status.add(result.getString("STATUSNAME"));
+			
+	}
+	
+	
+		
+	
+	
+	
+	
+	
+}

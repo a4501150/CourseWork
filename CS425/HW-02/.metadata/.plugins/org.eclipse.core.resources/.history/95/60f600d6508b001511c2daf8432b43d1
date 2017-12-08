@@ -1,0 +1,39 @@
+import java.sql.*;
+
+public class q4 {
+
+    PreparedStatement pre = null;
+    ResultSet result = null;
+	Connection con = null;
+    
+	public q4(Connection con) throws SQLException {
+		
+		System.out.println("now working on question 4\n"
+				+ "now will display the workers in current location\n");
+		this.con = con;
+		
+		viewWorkers();
+		
+	}
+	
+	public void viewWorkers() throws SQLException{
+		
+		String sql = "select * from bsong11.staff";
+	    pre = con.prepareStatement(sql);// 实例化预编译语句
+	    System.out.println("1");
+	    result = pre.executeQuery();// 执行查询，注意括号中不需要再加参数
+	        while (result.next())
+	            // 当结果集不为空时
+	        	 System.out.println("2");
+	            System.out.println("学号:" + result.getInt("ID") + "姓名:"
+	                    + result.getString("NAME"));
+	    
+		
+	}
+	
+	public void setTime() {
+		
+	}
+	
+	
+}

@@ -1,0 +1,52 @@
+/**
+ * 
+ */
+package midtem;
+
+/**
+ * @author lijinyang
+ *
+ */
+public class Fraction {
+
+	/**
+	 * 
+	 */
+	
+	int numerator, denominator;
+	
+	public Fraction(int numerator, int denominator) {
+		
+		this.numerator = numerator;
+		this.denominator = denominator;
+		
+	}
+	
+	public Fraction add(Fraction a, Fraction b) {
+		
+		int n, d;
+		n = a.numerator * b.denominator + a.denominator * b.numerator;
+		d = a.denominator * b.denominator;
+		
+		return new Fraction(n, d);
+	}
+	
+	public static Fraction multiplication(Fraction a, Fraction b){
+		
+		int n, d;
+		n = a.numerator * b.numerator;
+		d = a.denominator * b.denominator;
+		
+		return new Fraction(n, d);
+		
+	}
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

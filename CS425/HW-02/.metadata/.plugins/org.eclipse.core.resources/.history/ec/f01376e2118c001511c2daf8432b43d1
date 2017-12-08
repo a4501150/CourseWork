@@ -1,0 +1,11 @@
+import java.sql.Connection;
+import java.sql.SQLException;
+
+public class q5 extends q4 {
+
+	public q5(Connection con) throws SQLException {
+		super(con);
+		// TODO Auto-generated constructor stub
+	}
+
+}

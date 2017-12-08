@@ -1,0 +1,67 @@
+import java.util.Scanner;
+import java.sql.* ;  
+import oracle.jdbc.driver.OracleDriver;
+
+public class Client {
+	
+	public static final String DBURL = "jdbc:oracle:thin:@fourier.cs.iit.edu:1521:orcl";
+    public static final String DBUSER = "bsong11";
+    public static final String DBPASS = "930107";
+
+    Statement stmt = null;
+    ResultSet result = null;
+    
+	public static void main(String[] args) throws ClassNotFoundException, SQLException {
+			new Client();
+	}
+	
+	Client() throws ClassNotFoundException, SQLException {
+		
+		System.out.println("Hi, Choose the Question u wanna test for \n"
+				
+				+ "enter a number betwwen 4-6 to choose questions \n\n ");
+		
+		
+		
+		Connection con = null;// create connection
+	 
+        Class.forName("oracle.jdbc.driver.OracleDriver");// load Oracle driver
+        
+        con = DriverManager.getConnection(DBURL, DBUSER, DBPASS);// get it online
+	    
+        System.out.println("success to connect to db");
+        
+       // Scanner in = new Scanner(System.in);
+        
+		String sql = "SELECT NAME FROM STUFF";
+	    stmt = con.createStatement();// 实例化预编译语句
+	    result = stmt.executeQuery(sql);// 执行查询，注意括号中不需要再加参数
+	        
+	   
+	    while(result.next()) {
+	      String input = result.getString(1);
+	      System.out.println(input);
+	    }
+                
+		/*switch (in.nextInt()) {
+		
+		case 4:
+			new q4(con);
+		break;
+		
+		case 5:
+			new q5(con);
+		break;
+		
+		case 6:
+			new q6(con);
+		break;
+		
+		default:
+			System.out.println("enter a correct number! now exit");
+		break;		
+		}	*/
+	}
+	
+	
+}

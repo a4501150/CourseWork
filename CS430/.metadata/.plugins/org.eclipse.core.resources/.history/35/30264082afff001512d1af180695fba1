@@ -1,0 +1,18 @@
+package cs430;
+
+import java.util.*;
+
+public class cupGame {
+
+	 ArrayList <cup>cups;
+	
+	public static void main(String[] args) {
+		
+		
+		
+
+	}
+	
+	
+
+}

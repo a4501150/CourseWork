@@ -1,0 +1,20 @@
+README
+
+Sample data needs to import manully : create.sql insert.sql
+
+
+FOR FIRST 3 QUESTIONS.
+JUST COPY the sql content in 3questions.sql file to sqldeveloper and run.
+
+FOR LAST 3 QUESTIONS.
+OPEN hw02 subfolder and open it in eclipse as a project.
+
+just ckilck the run and the programe would give u instructions.
+
+for 6 th question, the creditCardCo  subclass contains some creidt card infomation that would be 'sufficient funds'. Open the source code and edit for addtional test.
+
+
+Member
+Jinyang li
+Bingyu Song
+Xin Liu

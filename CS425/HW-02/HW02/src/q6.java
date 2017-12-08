@@ -1,0 +1,161 @@
+/*  Group Member
+ *  Jinyang Li, Bingyu Song, Xin liu  */
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.Scanner;
+import java.util.Vector;
+
+public class q6  {
+	
+	Connection con = null;
+	CreditCardCo co = null;
+
+	public q6(Connection con) throws SQLException {
+		
+		this.con = con;
+		co = new CreditCardCo();
+		
+		q6Menu();
+		
+	}
+
+	void q6Menu() throws NumberFormatException, SQLException {
+		
+		System.out.println("to buy ticktes please sign up your info first \n"
+				+ "Enter it now and split with ',' ! example: name,phoneNumber,email,creditCardNumber\n" );
+		
+		Scanner in = new Scanner(System.in);
+		
+		String entered = in.nextLine();
+		
+		String name = entered.split(",")[0];
+		String phoneNumber = entered.split(",")[1];
+		String email = entered.split(",")[2];
+		String creditCardNumber = entered.split(",")[3];
+		
+		
+		
+		registerNewMember(name, Integer.parseInt(phoneNumber), email, Integer.parseInt(creditCardNumber));
+		
+		System.out.println("Sign up succesfully ,system is checking your payment method now");
+		
+		if (co.getFunds(Integer.parseInt(creditCardNumber)) <= 0) 
+			System.out.println("U have not enough funds in your credit card! CANNOT BUY TICKETS");
+		
+		System.out.println("Now you can buy tickets online.");
+		
+		in.nextLine();
+		
+		in.close();
+	}
+	
+	
+	
+	
+	
+	
+	
+	private void registerNewMember(String name, int parseInt, String email, int parseInt2) throws SQLException {
+		
+		String sql = "INSERT INTO member values (?,?,?,?,?,?)";		
+		PreparedStatement pstmt = con.prepareStatement(sql);
+		
+		int id = ( getLastID() + 1);
+		
+		pstmt.setInt(1, id);
+		pstmt.setString(2, name);
+		pstmt.setInt(3, parseInt);
+		pstmt.setString(4, email);
+		pstmt.setInt(5, parseInt2);
+		
+		pstmt.setString(6, "N");
+		
+		pstmt.executeQuery(); 
+		
+		
+	}
+
+
+
+
+
+
+
+	private int getLastID() throws SQLException {
+		
+		String sql = "SELECT MAX(ID) ID FROM MEMBER";		
+		PreparedStatement pstmt = con.prepareStatement(sql);		
+		ResultSet rs = pstmt.executeQuery();
+		rs.next();
+		int id = rs.getInt("ID");
+		
+		return id; 
+		
+	}
+
+
+
+
+
+
+
+	class CreditCardCo {
+		
+		Vector<creditCard> Cards = new Vector<creditCard>();
+		
+		
+		CreditCardCo() {
+			
+			/* Assume we have 7 valid creidt Cards in creditCardCo database */
+			
+			Cards.add(new creditCard(1,50));
+			Cards.add(new creditCard(2,50));
+			Cards.add(new creditCard(3,50));
+			Cards.add(new creditCard(4,50));
+			Cards.add(new creditCard(5,50));
+			Cards.add(new creditCard(6,50));
+			Cards.add(new creditCard(7,50));
+			
+		}
+		
+		int getFunds (int cardNumber) {
+			
+			for (creditCard i : Cards) {
+				
+				if (i.number == cardNumber) {
+					return i.funds;
+				}
+				
+			}
+			
+			return 0;
+
+		}
+		
+		
+		
+		
+	}
+	class creditCard {
+		
+		int number;
+		int funds;
+		
+		creditCard (int n, int f) {
+			
+			this.number = n;
+			this.funds = f;
+			
+		}
+		
+		
+	}
+
+	
+
+	
+	
+}

@@ -1,0 +1,22 @@
+package cs430;
+
+import java.util.*;
+
+public class state {
+	
+    Vector cups;
+    Node previos;
+    Node nextState;
+    
+
+    Node (Vector cups, Node previous) {
+       this.cups = cups;
+       this.previos = previous;
+    }
+
+
+    public boolean equals(Object node) { /* argument has to be an Object */
+       return(((Node)node).x == x && ((Node)node).y == y);
+    }
+
+}

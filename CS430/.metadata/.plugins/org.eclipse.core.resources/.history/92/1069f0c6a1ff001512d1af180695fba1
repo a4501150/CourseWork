@@ -1,0 +1,132 @@
+package cs430;
+
+import java.util.ArrayDeque;
+import java.util.Queue;
+import java.util.Scanner;
+import java.util.Stack;
+
+public class Manycups extends CUPC {
+
+	public Manycups(int size, int[] Initial_Size) {
+		super(size, Initial_Size);
+	}
+
+	final static String IMPOSSIBLE = "It's impossible to find t";
+	final static String GOTYOU = "Yes!we got t";
+
+	public static void main(String[] args) {
+
+		Scanner in = new Scanner(System.in);
+		System.out.println("please entry the cup size u from samll to big ,need splide by ,  ");
+		String a = in.nextLine();
+		System.out.println("please entry the target u want");
+		int t = in.nextInt();
+		String[] ss = a.split(",");
+		int size = ss.length;
+		int[] cups = new int[size];
+		for (int i = 0; i < size; i++) {
+			cups[i] = Integer.parseInt(ss[i]);
+		}
+		CUPC Initial_Water = new CUPC(size, cups);
+	    boolean l = Find_target(Initial_Water, t, cups);
+	    if(l)
+	    	System.out.print(GOTYOU);
+	    else
+	    	System.out.print(IMPOSSIBLE);
+	}
+	// 我们去测试当前结果是否已经在前面出现过
+	public static boolean test_now(Stack<CUPC> allVertext, CUPC initial_Water) {
+		if (allVertext.contains(initial_Water))
+			return true;
+		return false;
+	}
+
+	// 我们去测试是否已经找到了我们想要的target
+	public static boolean test_target(CUPC initial_Water, int size, int t) {
+		for (int i = 0; i < size; i++) {
+			if (initial_Water.vertext[i] == t)
+				return true;
+		}
+		return false;
+	}
+
+	// if我们找到了target print－parth
+	public static void print_path(CUPC tem, int size) {
+		for (int i = 0; i < size; i++) {
+			for (int tmp : tem.previous) {
+				System.out.print(i + " ");
+			}
+			System.out.print("\n");
+		}
+	}
+
+	// wooooo 终极大boss
+	public static boolean Find_target(CUPC initial_Water, int t, int[] cups) {
+		CUPC tem = initial_Water;
+		boolean k = true;
+		for (int i = 0; i < cups.length; i++) {
+			if (cups[i] == t) {
+				tem.vertext[i] = t;
+				tem.vertext[cups.length - 1] = cups[cups.length - 1] - t;
+				print_path(tem, 1);
+				k = true;
+			} else
+				k = false;
+		}
+		if (t > cups[cups.length-1])
+			k = false;
+		else 
+			k = BFS(initial_Water, t, cups);
+		
+		return k;
+	}
+
+	public static boolean BFS(CUPC initial_Water, int t, int[] cups) {
+		boolean m = false;
+		boolean y = false;
+		int size = cups.length;
+		Queue<CUPC> q = new ArrayDeque<CUPC>();
+		Stack<CUPC> allVertext = new Stack<CUPC>();
+		for (int i = 0; i < size; i++) {
+			if (initial_Water.vertext[i] == 0)
+				break;
+			for (int j = 0; j < size; j++) {
+				if (initial_Water.vertext[j] == cups[j])
+					break;
+				else if (initial_Water.vertext[j] == 0) {// ||cups[j]-initial_Water.vertext[j]
+															// >initial_Water.vertext[i]){
+					initial_Water.vertext[j] = initial_Water.vertext[i];
+					initial_Water.vertext[i] = 0;
+				} else if (cups[j] - initial_Water.vertext[j] >= initial_Water.vertext[i]) {
+					initial_Water.vertext[j] += initial_Water.vertext[i];
+					initial_Water.vertext[i] = 0;
+				} else {
+					initial_Water.vertext[i] -= cups[j] - initial_Water.vertext[j];
+					initial_Water.vertext[j] = cups[j];
+				}
+				allVertext.add(initial_Water);
+				if (test_now(allVertext, initial_Water))
+					break;
+				y = test_target(initial_Water, size, t);
+				if (y) {
+					print_path(initial_Water, q.size());
+					break;
+				}
+				q.add(initial_Water);
+			}
+			if (y) {
+				m = true;
+				break;
+			}
+
+			else if (q.isEmpty()) {
+				m = false;
+				break;
+			} else {
+				initial_Water = q.remove();
+				m = BFS(initial_Water, t, cups);
+			}
+		}
+		return m;
+	}
+}

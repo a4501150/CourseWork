@@ -1,0 +1,260 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>CS487 - Final Project - Tourist Assistent</title>
+
+<link rel="stylesheet" type="text/css" href="style.css" />
+
+
+</head>
+
+<body>
+
+   <!-- Header -->
+	<div class="box" id="top">
+		<header>
+			<h1 class="h1top">Tourism Assistant</h1>
+		</header>
+	</div>
+
+	<header>
+		<h3>Spring 2016 Teamates</h3>
+		<p> Shuyu Zhang | Jinyang Li | Tong Wu | Yixin Zeng | Rathees Kumar </p>
+	</header>	
+	
+	<section id="hw">
+		<header>
+			<h2> Enter Your Destination </h2>
+		</header>
+		
+		<div class="container">
+			<div class="box">
+			
+			
+		    <form id="searchform" name="searchform" method="get" action="index.html">
+	      		<div class="fieldcontainer">
+	        	<input id="pac" type="text" class="searchfield controls" placeholder="City or Country...">
+	        	<input type="submit" name="searchbtn" id="searchbtn" value=""> 
+	      		</div><!-- @end .fieldcontainer -->
+    		</form>
+    		
+		                       		
+			</div>
+		</div>
+	</section>
+	
+	<section id="hw6">
+		<header>
+			<h2> Our Suggestions</h2>
+		</header>
+		
+		<div class="container">
+			<div class="columns-3">
+
+
+
+			<div class="box">
+				<center><strong><p> Destination Details </p></strong></center>
+
+				<p id='cityname'></p>
+
+				<div id="map"></div>
+
+
+			</div>	
+
+			<div class="box">
+				<center><strong><p> Suggestins - To Do List </p></strong></center>
+				<ul class='todo' id='one'>
+
+					<li id='1'>a</li>
+					<li>b</li>
+					<li>c</li>
+					<li>d</li>
+
+				</ul>
+
+
+				<center>
+
+					<button id='addBtn' type="button"> Add another thing</button>
+
+					<br>
+
+					<input id='csg' type="text" name="customized thing" placeholder="Some more u wanna do?"></input>
+
+
+					<br>
+
+					<button id='sub' type="button"> Make it in my list!</button>
+
+				</center>
+
+			</div>	
+
+			<div class="box">
+				<center><strong><p> Prepared && Completed Suggestions </p></strong></center>
+				
+				<ul class='done' id='two'>
+
+					<li>1</li>
+					<li>2</li>
+					<li>3</li>
+					<li>4</li>
+
+				</ul>
+
+			</div>	
+
+
+
+			</div>
+		</div>
+		
+	</section>
+
+</body>
+
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript" src="jsinput.js"></script>
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+
+
+	<script
+		src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places">
+	</script>
+
+	<script>
+		function initialize() {
+			var mapProp = {
+				center:new google.maps.LatLng(51.508742,-0.120850),
+			    zoom:13,
+			    mapTypeId:google.maps.MapTypeId.ROADMAP
+			};
+			var map=new google.maps.Map(document.getElementById("map"), mapProp);
+
+			new google.maps.places.Autocomplete(
+    				(document.getElementById('pac')), {
+        			types: ['geocode']
+    		});
+
+		var input = document.getElementById('pac');
+        var searchBox = new google.maps.places.SearchBox(input);
+    	// Bias the SearchBox results towards current map's viewport.
+        map.addListener('bounds_changed', function() {
+          searchBox.setBounds(map.getBounds());
+        });
+
+        var markers = [];
+        // Listen for the event fired when the user selects a prediction and retrieve
+        // more details for that place.
+        searchBox.addListener('places_changed', function() {
+          var places = searchBox.getPlaces();
+
+          if (places.length == 0) {
+            return;
+          }
+
+          // Clear out the old markers.
+          markers.forEach(function(marker) {
+            marker.setMap(null);
+          });
+          markers = [];
+
+          // For each place, get the icon, name and location.
+          var bounds = new google.maps.LatLngBounds();
+          places.forEach(function(place) {
+            var icon = {
+              url: place.icon,
+              size: new google.maps.Size(71, 71),
+              origin: new google.maps.Point(0, 0),
+              anchor: new google.maps.Point(17, 34),
+              scaledSize: new google.maps.Size(25, 25)
+            };
+
+            // Create a marker for each place.
+            markers.push(new google.maps.Marker({
+              map: map,
+              icon: icon,
+              title: place.name,
+              position: place.geometry.location
+            }));
+
+            if (place.geometry.viewport) {
+              // Only geocodes have viewport.
+              bounds.union(place.geometry.viewport);
+            } else {
+              bounds.extend(place.geometry.location);
+            }
+          });
+          map.fitBounds(bounds);
+        });
+
+		}
+
+		google.maps.event.addDomListener(window, 'load', initialize);
+
+	</script>
+
+	<script>
+
+	document.getElementById("one").addEventListener("click",function(e) {
+        // e.target is our targetted element.
+                    // try doing console.log(e.target.nodeName), it will result LI
+        if(e.target && e.target.nodeName == "LI") {
+            console.log(e.target.id + " was clicked");
+            $(e.target).appendTo('#two');
+        }
+
+    });
+
+    document.getElementById("two").addEventListener("click",function(e) {
+        // e.target is our targetted element.
+                    // try doing console.log(e.target.nodeName), it will result LI
+        if(e.target && e.target.nodeName == "LI") {
+            console.log(e.target.id + " was clicked");
+            $(e.target).appendTo('#one');
+        }
+
+    });
+
+    $("#pac").change(function(){
+
+    	//$('#cityname').html($('#pac').val());
+    	var a = navigator.geolocation.getCurrentPosition();
+    	alert($(a));
+
+    })
+
+    $("#csg").hide();
+
+    $("#sub").hide();
+
+    $( "#addBtn" ).click(function() {
+  		$("#csg").toggle(1000);
+  		$(this).toggle(1000);
+  		$("#sub").toggle(1000);
+	});
+
+	$( "#sub" ).click(function() {
+  		var newli = '<li>' + $("#csg").val() + '</li>';
+
+  		$(newli).appendTo('#one');
+  		
+  		$("#csg").toggle(1000);
+  		$(this).toggle(1000);
+  		$("#addBtn").toggle(1000);
+
+	});
+
+
+
+	</script>
+
+</html>

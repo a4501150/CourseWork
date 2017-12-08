@@ -1,0 +1,10 @@
+package cs430;
+
+public class cupGame {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

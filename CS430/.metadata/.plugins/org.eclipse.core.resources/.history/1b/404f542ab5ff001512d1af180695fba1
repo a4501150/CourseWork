@@ -1,0 +1,35 @@
+package cs430;
+
+import java.util.*;
+
+public class cupGame {
+
+	static Vector <cup>cups= new Vector<cup>();
+	
+	public static void main(String[] args) {
+		
+		Scanner in = new Scanner(System.in);
+		
+		System.out.println("please entry the cup size u from samll to big , split by ,");
+		String target_water = in.nextLine();
+		System.out.println("please entry the target water u want");
+		int t = in.nextInt();
+		
+		String[] input = target_water.split(",");
+		int cups_amount = input.length;
+		
+		
+		for (int i = 0; i < cups_amount; i++) {
+			cups.add(new cup(Integer.parseInt(input[i])));
+		}
+		
+		//杯子生成完毕
+		
+
+	}
+	
+	
+	
+	
+
+}
