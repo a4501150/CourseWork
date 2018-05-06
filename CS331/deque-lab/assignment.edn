@@ -1,0 +1,9 @@
+{:rubric "cs331"
+  :slug "dequeue-lab"
+  :title "Dequeue Lab"
+  :given "2014-04-07"
+  :due "2014-04-16"
+  :kind "L"
+  :category "labs"
+  :max 100
+  :order 13}

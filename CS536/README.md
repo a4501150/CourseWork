@@ -1,6 +1,6 @@
-# CourseWork
+
 Saved Solutions @ Illinois Institute of Technology
 
-General Solutions 
+CS536 - Science Of Programming
 
 Use at your own risk

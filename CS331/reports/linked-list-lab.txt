@@ -1,0 +1,107 @@
+Lab report for Linked List Lab - jli134
+Timestamp: 2014-10-12 10:44:01
+
+|  :scenario |                                :title |                   :result | :score |
+|------------+---------------------------------------+---------------------------+--------|
+|    working | Test student code vs instructor tests |                      Fail |     25 |
+| qualifying | Test student tests vs instructor code |                      Fail |      4 |
+| qualifying |           Qualifying Scenarios Failed | No further scenarios run. |      0 |
+|      total |                           Total Score |                           |     29 |
+
+Details:
+
+
+** Details for Test student code vs instructor tests
+
+
+FAIL "about `delete` - it removes elements properly." at (t_core.clj:58)
+    Expected: {:car 1, :cdr {:car 5, :cdr {:car 8, :cdr {:car 5, :cdr {:car 1, :cdr }}}}}::linked_list_lab.core.Cons
+      Actual: nil
+
+FAIL "about `delete` - it removes elements properly." at (t_core.clj:59)
+    Expected: {:car 5, :cdr {:car 8, :cdr {:car 5, :cdr {:car 1, :cdr }}}}::linked_list_lab.core.Cons
+      Actual: nil
+
+FAIL "about `delete` - it removes elements properly." at (t_core.clj:60)
+    Expected: {:car 1, :cdr {:car 8, :cdr {:car 5, :cdr {:car 1, :cdr }}}}::linked_list_lab.core.Cons
+      Actual: nil
+
+FAIL "about `delete` - it removes elements properly." at (t_core.clj:61)
+    Expected: {:car 1, :cdr {:car 5, :cdr {:car 5, :cdr {:car 1, :cdr }}}}::linked_list_lab.core.Cons
+      Actual: nil
+
+FAIL "about `delete` - it removes elements properly." at (t_core.clj:62)
+    Expected: {:car 1, :cdr {:car 5, :cdr {:car 8, :cdr {:car 5, :cdr {:car 1, :cdr }}}}}::linked_list_lab.core.Cons
+      Actual: nil
+
+FAIL "about `delete` - it handles size correctly." at (t_core.clj:64)
+    Expected: 5
+      Actual: nil
+
+FAIL "about `delete` - it handles size correctly." at (t_core.clj:65)
+    Expected: 4
+      Actual: nil
+
+FAIL "about `delete` - it handles size correctly." at (t_core.clj:66)
+    Expected: 4
+      Actual: nil
+
+FAIL "about `delete` - it handles size correctly." at (t_core.clj:67)
+    Expected: 4
+      Actual: nil
+
+FAIL "about `delete` - it handles size correctly." at (t_core.clj:68)
+    Expected: 5
+      Actual: nil
+
+FAIL "about `delete-all` - it removes elements properly." at (t_core.clj:74)
+    Expected: {:car 1, :cdr {:car 5, :cdr {:car 8, :cdr {:car 5, :cdr {:car 1, :cdr }}}}}::linked_list_lab.core.Cons
+      Actual: nil
+
+FAIL "about `delete-all` - it removes elements properly." at (t_core.clj:75)
+    Expected: {:car 5, :cdr {:car 8, :cdr {:car 5, :cdr }}}::linked_list_lab.core.Cons
+      Actual: nil
+
+FAIL "about `delete-all` - it removes elements properly." at (t_core.clj:76)
+    Expected: {:car 1, :cdr {:car 8, :cdr {:car 1, :cdr }}}::linked_list_lab.core.Cons
+      Actual: nil
+
+FAIL "about `delete-all` - it removes elements properly." at (t_core.clj:77)
+    Expected: {:car 1, :cdr {:car 5, :cdr {:car 5, :cdr {:car 1, :cdr }}}}::linked_list_lab.core.Cons
+      Actual: nil
+
+FAIL "about `delete-all` - it removes elements properly." at (t_core.clj:78)
+    Expected: {:car 1, :cdr {:car 5, :cdr {:car 8, :cdr {:car 5, :cdr {:car 1, :cdr }}}}}::linked_list_lab.core.Cons
+      Actual: nil
+
+FAIL "about `delete-all` - it handles size correctly." at (t_core.clj:80)
+    Expected: 5
+      Actual: nil
+
+FAIL "about `delete-all` - it handles size correctly." at (t_core.clj:81)
+    Expected: 3
+      Actual: nil
+
+FAIL "about `delete-all` - it handles size correctly." at (t_core.clj:82)
+    Expected: 3
+      Actual: nil
+
+FAIL "about `delete-all` - it handles size correctly." at (t_core.clj:83)
+    Expected: 4
+      Actual: nil
+
+FAIL "about `delete-all` - it handles size correctly." at (t_core.clj:84)
+    Expected: 5
+      Actual: nil
+FAILURE: 20 checks failed.  (But 25 succeeded.)
+Subprocess failed
+
+
+** Details for Test student tests vs instructor code
+
+
+FAIL "about this lab - the student never started.  Fix this `facts` from." at (t_core.clj:61)
+    Expected: 42
+      Actual: 30
+FAILURE: 1 check failed.  (But 25 succeeded.)
+Subprocess failed

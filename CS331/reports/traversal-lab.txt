@@ -1,0 +1,144 @@
+Lab report for Traversal Lab - jli134
+Timestamp: 2014-11-17 01:05:22
+
+|  :scenario |                                     :title |                              :result | :score |
+|------------+--------------------------------------------+--------------------------------------+--------|
+|    working |      Test student code vs instructor tests |                                 Pass |     45 |
+| qualifying |      Test student tests vs instructor code |                                 Pass |      5 |
+|    broke-1 |           Get Adjacent Nodes ignores west. | Pass: student tests detected errors. |     10 |
+|    broke-2 |          Get Adjacent Nodes ignores walls. | Pass: student tests detected errors. |     10 |
+|    broke-3 |               DFS heads toward wrong goal. | Pass: student tests detected errors. |     10 |
+|    broke-4 |                  DFS swaps goal and start. |                                      |        |
+|    broke-5 | DFS marks all attempts, not just solution. | Pass: student tests detected errors. |     10 |
+|      total |                                Total Score |                                      |     90 |
+
+Details:
+
+
+** Details for Test student code vs instructor tests
+
+All checks (10) succeeded.
+
+
+** Details for Test student tests vs instructor code
+
+All checks (5) succeeded.
+
+
+** Details for Get Adjacent Nodes ignores west.
+
+
+FAIL "about dfs solver - it works." at (t_core.clj:42)
+    Expected: "solved"
+      Actual: "too many solution paths"
+
+FAIL "about dfs solver - it works." at (t_core.clj:43)
+    Expected: "solved"
+      Actual: "too many solution paths"
+
+FAIL "about dfs solver - it works." at (t_core.clj:44)
+    Expected: true
+      Actual: false
+FAILURE: 3 checks failed.  (But 2 succeeded.)
+Subprocess failed
+
+
+** Details for Get Adjacent Nodes ignores walls.
+
+
+FAIL "about dfs solver - it works." at (t_core.clj:42)
+    Expected: "solved"
+      Actual: "solution goes through wall"
+
+FAIL "about dfs solver - it works." at (t_core.clj:43)
+    Expected: "solved"
+      Actual: "solution goes through wall"
+FAILURE: 2 checks failed.  (But 3 succeeded.)
+Subprocess failed
+
+
+** Details for DFS heads toward wrong goal.
+
+
+FAIL "about dfs solver - it works." at (t_core.clj:42)
+    Expected: "solved"
+      Actual: "too many solution paths"
+
+FAIL "about dfs solver - it works." at (t_core.clj:43)
+    Expected: "solved"
+      Actual: "too many solution paths"
+FAILURE: 2 checks failed.  (But 3 succeeded.)
+Subprocess failed
+
+
+** Details for DFS swaps goal and start.
+
+Exception in thread "main" java.lang.IllegalArgumentException: No matching clause: :undefined
+	at traversal_lab.core$set_solution.invoke(core.clj:86)
+	at traversal_lab.core$solve_maze_dfs$fn__6342.invoke(core.clj:346)
+	at traversal_lab.core$swap_2d.invoke(core.clj:101)
+	at traversal_lab.core$solve_maze_dfs.invoke(core.clj:346)
+	at traversal_lab.core$solve_maze_dfs.invoke(core.clj:336)
+	at traversal_lab.t_core$eval6386$base_function__5041__auto____6387$fn__6388.invoke(t_core.clj:38)
+	at midje.util.thread_safe_var_nesting$with_altered_roots_STAR_.invoke(thread_safe_var_nesting.clj:32)
+	at traversal_lab.t_core$eval6386$base_function__5041__auto____6387.invoke(t_core.clj:38)
+	at clojure.lang.AFn.applyToHelper(AFn.java:159)
+	at clojure.lang.AFn.applyTo(AFn.java:151)
+	at clojure.lang.AFunction$1.doInvoke(AFunction.java:29)
+	at clojure.lang.RestFn.invoke(RestFn.java:397)
+	at midje.checking.facts$check_one$fn__5001.invoke(facts.clj:31)
+	at midje.checking.facts$check_one.invoke(facts.clj:30)
+	at midje.checking.facts$creation_time_check.invoke(facts.clj:35)
+	at traversal_lab.t_core$eval6386.invoke(t_core.clj:38)
+	at clojure.lang.Compiler.eval(Compiler.java:6619)
+	at clojure.lang.Compiler.load(Compiler.java:7064)
+	at clojure.lang.RT.loadResourceScript(RT.java:370)
+	at clojure.lang.RT.loadResourceScript(RT.java:361)
+	at clojure.lang.RT.load(RT.java:440)
+	at clojure.lang.RT.load(RT.java:411)
+	at clojure.core$load$fn__5018.invoke(core.clj:5530)
+	at clojure.core$load.doInvoke(core.clj:5529)
+	at clojure.lang.RestFn.invoke(RestFn.java:408)
+	at clojure.core$load_one.invoke(core.clj:5336)
+	at clojure.core$load_lib$fn__4967.invoke(core.clj:5375)
+	at clojure.core$load_lib.doInvoke(core.clj:5374)
+	at clojure.lang.RestFn.applyTo(RestFn.java:142)
+	at clojure.core$apply.invoke(core.clj:619)
+	at clojure.core$load_libs.doInvoke(core.clj:5413)
+	at clojure.lang.RestFn.applyTo(RestFn.java:137)
+	at clojure.core$apply.invoke(core.clj:619)
+	at clojure.core$require.doInvoke(core.clj:5496)
+	at clojure.lang.RestFn.invoke(RestFn.java:421)
+	at midje.repl$load_facts$fn__6189.invoke(repl.clj:206)
+	at midje.repl$load_facts.doInvoke(repl.clj:192)
+	at clojure.lang.RestFn.invoke(RestFn.java:397)
+	at user$eval6251.invoke(form-init1037678586571188347.clj:1)
+	at clojure.lang.Compiler.eval(Compiler.java:6619)
+	at clojure.lang.Compiler.eval(Compiler.java:6609)
+	at clojure.lang.Compiler.load(Compiler.java:7064)
+	at clojure.lang.Compiler.loadFile(Compiler.java:7020)
+	at clojure.main$load_script.invoke(main.clj:294)
+	at clojure.main$init_opt.invoke(main.clj:299)
+	at clojure.main$initialize.invoke(main.clj:327)
+	at clojure.main$null_opt.invoke(main.clj:362)
+	at clojure.main$main.doInvoke(main.clj:440)
+	at clojure.lang.RestFn.invoke(RestFn.java:421)
+	at clojure.lang.Var.invoke(Var.java:419)
+	at clojure.lang.AFn.applyToHelper(AFn.java:163)
+	at clojure.lang.Var.applyTo(Var.java:532)
+	at clojure.main.main(main.java:37)
+Subprocess failed
+
+
+** Details for DFS marks all attempts, not just solution.
+
+
+FAIL "about dfs solver - it works." at (t_core.clj:42)
+    Expected: "solved"
+      Actual: "too many solution paths"
+
+FAIL "about dfs solver - it works." at (t_core.clj:43)
+    Expected: "solved"
+      Actual: "too many solution paths"
+FAILURE: 2 checks failed.  (But 3 succeeded.)
+Subprocess failed

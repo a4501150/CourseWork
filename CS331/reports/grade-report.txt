@@ -1,0 +1,17 @@
+Grade Report for Jinyang Li
+Produced 2014-12-15 11:41
+Netid: jli134 cwid: A20317851
+Course: cs331 (2014-08)  Section: 01
+
+     Assignment   Status Raw Max    Norm Weight  Points 
+--------------- -------- --- --- ------- ------ ------- 
+    Exam 1 (v2) Replaced n/a  92  83.00% 0.2500 20.7500 
+    Exam 2 (v1) Replaced n/a  84  83.00% 0.2500 20.7500 
+Final Exam (v1)   Graded 166 200  83.00% 0.2500 20.7500 
+    Initial Lab   Graded 100 100 100.00% 0.0625  6.2500 
+Linked List Lab   Graded  29 100  29.00% 0.0625  1.8125 
+  Traversal Lab   Graded  90 100  90.00% 0.0625  5.6250 
+      Deque Lab   Graded 100 100 100.00% 0.0625  6.2500 
+       Heap Lab  Dropped   5 100   5.00% 0.0000  0.0000 
+--------------- -------- --- --- ------- ------ ------- 
+          Total                   82.19% 1.0000 82.1875 

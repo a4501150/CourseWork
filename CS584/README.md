@@ -1,6 +1,6 @@
-# CourseWork
+
 Saved Solutions @ Illinois Institute of Technology
 
-General Solutions 
+CS584 - Software Quality Management
 
 Use at your own risk

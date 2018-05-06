@@ -1,6 +1,6 @@
-# CourseWork
+
 Saved Solutions @ Illinois Institute of Technology
 
-General Solutions 
+CS525 - Advanced Database
 
 Use at your own risk

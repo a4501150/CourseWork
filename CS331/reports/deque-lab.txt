@@ -1,0 +1,258 @@
+Lab report for Deque Lab - jli134
+Timestamp: 2014-11-17 01:15:48
+
+|  :scenario |                                :title |                              :result | :score |
+|------------+---------------------------------------+--------------------------------------+--------|
+|    working | Test student code vs instructor tests |                                 Pass |     45 |
+| qualifying | Test student tests vs instructor code |                                 Pass |      5 |
+|    broke-1 |             deque-size only returns 0 | Pass: student tests detected errors. |      5 |
+|    broke-2 |     push-front doesn't increment size | Pass: student tests detected errors. |      5 |
+|    broke-3 |        pop-back lets size go negative | Pass: student tests detected errors. |      5 |
+|    broke-4 |            pop-front doesn't dec size | Pass: student tests detected errors. |      5 |
+|    broke-5 |          push-back inserts into front | Pass: student tests detected errors. |      5 |
+|    broke-6 |     flip-front doesn't clear the back | Pass: student tests detected errors. |      5 |
+|    broke-7 |     flip-back doesn't clear the front | Pass: student tests detected errors. |      5 |
+|    broke-8 |                back doesn't flip list | Pass: student tests detected errors. |      5 |
+|    broke-9 |        front references the back list | Pass: student tests detected errors. |      5 |
+|   broke-10 |               flip-front flips always | Pass: student tests detected errors. |      5 |
+|      total |                           Total Score |                                      |    100 |
+
+Details:
+
+
+** Details for Test student code vs instructor tests
+
+All checks (100) succeeded.
+
+
+** Details for Test student tests vs instructor code
+
+All checks (25) succeeded.
+
+
+** Details for deque-size only returns 0
+
+
+FAIL "About pop front and pop back. - pop front works on non empty deques." at (t_core.clj:42)
+    Expected: {:back clojure.lang.PersistentList$EmptyList@1, :front (1), :size 1}::deque.core.Deque
+      Actual: {:back clojure.lang.PersistentList$EmptyList@1, :front (2 1), :size 2}::deque.core.Deque
+
+FAIL "About pop front and pop back. - pop front works on non empty deques." at (t_core.clj:43)
+    Expected: {:back clojure.lang.PersistentList$EmptyList@1, :front clojure.lang.PersistentList$EmptyList@1, :size 0}::deque.core.Deque
+      Actual: {:back clojure.lang.PersistentList$EmptyList@1, :front (1), :size 1}::deque.core.Deque
+
+FAIL "About pop front and pop back. - pop back works on non empty deques." at (t_core.clj:45)
+    Expected: {:back (1), :front clojure.lang.PersistentList$EmptyList@1, :size 1}::deque.core.Deque
+      Actual: {:back (2 1), :front clojure.lang.PersistentList$EmptyList@1, :size 2}::deque.core.Deque
+
+FAIL "About pop front and pop back. - pop back works on non empty deques." at (t_core.clj:46)
+    Expected: {:back clojure.lang.PersistentList$EmptyList@1, :front clojure.lang.PersistentList$EmptyList@1, :size 0}::deque.core.Deque
+      Actual: {:back (1), :front clojure.lang.PersistentList$EmptyList@1, :size 1}::deque.core.Deque
+
+FAIL "About pop front and pop back. - pop front works when a flip is required" at (t_core.clj:48)
+    Expected: {:back clojure.lang.PersistentList$EmptyList@1, :front (2), :size 1}::deque.core.Deque
+      Actual: {:back (2 1), :front clojure.lang.PersistentList$EmptyList@1, :size 2}::deque.core.Deque
+
+FAIL "About pop front and pop back. - pop front works when a flip is required" at (t_core.clj:49)
+    Expected: {:back clojure.lang.PersistentList$EmptyList@1, :front clojure.lang.PersistentList$EmptyList@1, :size 0}::deque.core.Deque
+      Actual: {:back (1), :front clojure.lang.PersistentList$EmptyList@1, :size 1}::deque.core.Deque
+
+FAIL "About pop front and pop back. - pop back works when a flip is required" at (t_core.clj:51)
+    Expected: {:back (2), :front clojure.lang.PersistentList$EmptyList@1, :size 1}::deque.core.Deque
+      Actual: {:back clojure.lang.PersistentList$EmptyList@1, :front (2 1), :size 2}::deque.core.Deque
+
+FAIL "About pop front and pop back. - pop back works when a flip is required" at (t_core.clj:52)
+    Expected: {:back clojure.lang.PersistentList$EmptyList@1, :front clojure.lang.PersistentList$EmptyList@1, :size 0}::deque.core.Deque
+      Actual: {:back clojure.lang.PersistentList$EmptyList@1, :front (1), :size 1}::deque.core.Deque
+FAILURE: 8 checks failed.  (But 17 succeeded.)
+Subprocess failed
+
+
+** Details for push-front doesn't increment size
+
+
+FAIL "About push front and push back. - push front works when supposed to." at (t_core.clj:12)
+    Expected: {:back clojure.lang.PersistentList$EmptyList@1, :front (1), :size 1}::deque.core.Deque
+      Actual: {:back clojure.lang.PersistentList$EmptyList@1, :front (1), :size 0}::deque.core.Deque
+
+FAIL "About push front and push back. - push front works when supposed to." at (t_core.clj:13)
+    Expected: {:back clojure.lang.PersistentList$EmptyList@1, :front (2 1), :size 2}::deque.core.Deque
+      Actual: {:back clojure.lang.PersistentList$EmptyList@1, :front (2 1), :size 0}::deque.core.Deque
+
+FAIL "About flip front and flip back. - flip back works when it should." at (t_core.clj:26)
+    Expected: {:back (1 2), :front clojure.lang.PersistentList$EmptyList@1, :size 2}::deque.core.Deque
+      Actual: {:back (1 2), :front clojure.lang.PersistentList$EmptyList@1, :size 0}::deque.core.Deque
+
+FAIL "About pop front and pop back. - pop front works on non empty deques." at (t_core.clj:42)
+    Expected: {:back clojure.lang.PersistentList$EmptyList@1, :front (1), :size 0}::deque.core.Deque
+      Actual: {:back clojure.lang.PersistentList$EmptyList@1, :front (2 1), :size 0}::deque.core.Deque
+
+FAIL "About pop front and pop back. - pop front works on non empty deques." at (t_core.clj:43)
+    Expected: {:back clojure.lang.PersistentList$EmptyList@1, :front clojure.lang.PersistentList$EmptyList@1, :size 0}::deque.core.Deque
+      Actual: {:back clojure.lang.PersistentList$EmptyList@1, :front (1), :size 0}::deque.core.Deque
+
+FAIL "About pop front and pop back. - pop front works when a flip is required" at (t_core.clj:48)
+    Expected: {:back clojure.lang.PersistentList$EmptyList@1, :front (2), :size 0}::deque.core.Deque
+      Actual: {:back clojure.lang.PersistentList$EmptyList@1, :front (2), :size 1}::deque.core.Deque
+
+FAIL "About pop front and pop back. - pop back works when a flip is required" at (t_core.clj:51)
+    Expected: {:back (2), :front clojure.lang.PersistentList$EmptyList@1, :size 1}::deque.core.Deque
+      Actual: {:back clojure.lang.PersistentList$EmptyList@1, :front (2 1), :size 0}::deque.core.Deque
+
+FAIL "About pop front and pop back. - pop back works when a flip is required" at (t_core.clj:52)
+    Expected: {:back clojure.lang.PersistentList$EmptyList@1, :front clojure.lang.PersistentList$EmptyList@1, :size 0}::deque.core.Deque
+      Actual: {:back clojure.lang.PersistentList$EmptyList@1, :front (1), :size 0}::deque.core.Deque
+FAILURE: 8 checks failed.  (But 17 succeeded.)
+Subprocess failed
+
+
+** Details for pop-back lets size go negative
+
+
+FAIL "About pop front and pop back. - pop back works on an empty deque." at (t_core.clj:56)
+    Expected: {:back clojure.lang.PersistentList$EmptyList@1, :front clojure.lang.PersistentList$EmptyList@1, :size 0}::deque.core.Deque
+      Actual: {:back clojure.lang.PersistentList$EmptyList@1, :front clojure.lang.PersistentList$EmptyList@1, :size -1}::deque.core.Deque
+FAILURE: 1 check failed.  (But 24 succeeded.)
+Subprocess failed
+
+
+** Details for pop-front doesn't dec size
+
+
+FAIL "About pop front and pop back. - pop front works on non empty deques." at (t_core.clj:42)
+    Expected: {:back clojure.lang.PersistentList$EmptyList@1, :front (1), :size 1}::deque.core.Deque
+      Actual: {:back clojure.lang.PersistentList$EmptyList@1, :front (1), :size 2}::deque.core.Deque
+
+FAIL "About pop front and pop back. - pop front works on non empty deques." at (t_core.clj:43)
+    Expected: {:back clojure.lang.PersistentList$EmptyList@1, :front clojure.lang.PersistentList$EmptyList@1, :size 0}::deque.core.Deque
+      Actual: {:back clojure.lang.PersistentList$EmptyList@1, :front clojure.lang.PersistentList$EmptyList@1, :size 1}::deque.core.Deque
+
+FAIL "About pop front and pop back. - pop front works when a flip is required" at (t_core.clj:48)
+    Expected: {:back clojure.lang.PersistentList$EmptyList@1, :front (2), :size 1}::deque.core.Deque
+      Actual: {:back clojure.lang.PersistentList$EmptyList@1, :front (2), :size 2}::deque.core.Deque
+
+FAIL "About pop front and pop back. - pop front works when a flip is required" at (t_core.clj:49)
+    Expected: {:back clojure.lang.PersistentList$EmptyList@1, :front clojure.lang.PersistentList$EmptyList@1, :size 0}::deque.core.Deque
+      Actual: {:back clojure.lang.PersistentList$EmptyList@1, :front clojure.lang.PersistentList$EmptyList@1, :size 1}::deque.core.Deque
+FAILURE: 4 checks failed.  (But 21 succeeded.)
+Subprocess failed
+
+
+** Details for push-back inserts into front
+
+
+FAIL "About push front and push back. - push back works when supposed to." at (t_core.clj:15)
+    Expected: {:back (1), :front clojure.lang.PersistentList$EmptyList@1, :size 1}::deque.core.Deque
+      Actual: {:back clojure.lang.PersistentList$EmptyList@1, :front (1), :size 1}::deque.core.Deque
+
+FAIL "About push front and push back. - push back works when supposed to." at (t_core.clj:16)
+    Expected: {:back (2 1), :front clojure.lang.PersistentList$EmptyList@1, :size 2}::deque.core.Deque
+      Actual: {:back clojure.lang.PersistentList$EmptyList@1, :front (2 1), :size 2}::deque.core.Deque
+
+FAIL "About flip front and flip back. - flip front works when it should." at (t_core.clj:21)
+    Expected: {:back clojure.lang.PersistentList$EmptyList@1, :front (1 2), :size 2}::deque.core.Deque
+      Actual: {:back clojure.lang.PersistentList$EmptyList@1, :front (2 1), :size 2}::deque.core.Deque
+
+FAIL "About flip front and flip back. - flip back does nothing when it should." at (t_core.clj:29)
+    Expected: {:back clojure.lang.PersistentList$EmptyList@1, :front (1), :size 1}::deque.core.Deque
+      Actual: {:back (1), :front clojure.lang.PersistentList$EmptyList@1, :size 1}::deque.core.Deque
+
+FAIL "About front and back. - front returns the correct answer and flips if neccesary." at (t_core.clj:34)
+    Expected: 1
+      Actual: 2
+
+FAIL "About front and back. - back returns the correct answer and flips if neccesary." at (t_core.clj:37)
+    Expected: 2
+      Actual: 1
+
+FAIL "About pop front and pop back. - pop back works on non empty deques." at (t_core.clj:45)
+    Expected: {:back clojure.lang.PersistentList$EmptyList@1, :front (1), :size 1}::deque.core.Deque
+      Actual: {:back (2), :front clojure.lang.PersistentList$EmptyList@1, :size 1}::deque.core.Deque
+
+FAIL "About pop front and pop back. - pop front works when a flip is required" at (t_core.clj:48)
+    Expected: {:back clojure.lang.PersistentList$EmptyList@1, :front (2), :size 1}::deque.core.Deque
+      Actual: {:back clojure.lang.PersistentList$EmptyList@1, :front (1), :size 1}::deque.core.Deque
+
+FAIL "About pop front and pop back. - pop back works when a flip is required" at (t_core.clj:51)
+    Expected: {:back clojure.lang.PersistentList$EmptyList@1, :front (2), :size 1}::deque.core.Deque
+      Actual: {:back (2), :front clojure.lang.PersistentList$EmptyList@1, :size 1}::deque.core.Deque
+FAILURE: 9 checks failed.  (But 16 succeeded.)
+Subprocess failed
+
+
+** Details for flip-front doesn't clear the back
+
+
+FAIL "About flip front and flip back. - flip front works when it should." at (t_core.clj:21)
+    Expected: {:back clojure.lang.PersistentList$EmptyList@1, :front (1 2), :size 2}::deque.core.Deque
+      Actual: {:back (2 1), :front (1 2), :size 2}::deque.core.Deque
+
+FAIL "About pop front and pop back. - pop front works when a flip is required" at (t_core.clj:48)
+    Expected: {:back clojure.lang.PersistentList$EmptyList@1, :front (2), :size 1}::deque.core.Deque
+      Actual: {:back (2 1), :front (2), :size 1}::deque.core.Deque
+
+FAIL "About pop front and pop back. - pop front works when a flip is required" at (t_core.clj:49)
+    Expected: {:back clojure.lang.PersistentList$EmptyList@1, :front clojure.lang.PersistentList$EmptyList@1, :size 0}::deque.core.Deque
+      Actual: {:back (1), :front clojure.lang.PersistentList$EmptyList@1, :size 0}::deque.core.Deque
+FAILURE: 3 checks failed.  (But 22 succeeded.)
+Subprocess failed
+
+
+** Details for flip-back doesn't clear the front
+
+
+FAIL "About flip front and flip back. - flip back works when it should." at (t_core.clj:26)
+    Expected: {:back (1 2), :front clojure.lang.PersistentList$EmptyList@1, :size 2}::deque.core.Deque
+      Actual: {:back (1 2), :front (2 1), :size 2}::deque.core.Deque
+
+FAIL "About pop front and pop back. - pop back works when a flip is required" at (t_core.clj:51)
+    Expected: {:back (2), :front clojure.lang.PersistentList$EmptyList@1, :size 1}::deque.core.Deque
+      Actual: {:back (2), :front (2 1), :size 1}::deque.core.Deque
+
+FAIL "About pop front and pop back. - pop back works when a flip is required" at (t_core.clj:52)
+    Expected: {:back clojure.lang.PersistentList$EmptyList@1, :front clojure.lang.PersistentList$EmptyList@1, :size 0}::deque.core.Deque
+      Actual: {:back clojure.lang.PersistentList$EmptyList@1, :front (1), :size 0}::deque.core.Deque
+FAILURE: 3 checks failed.  (But 22 succeeded.)
+Subprocess failed
+
+
+** Details for back doesn't flip list
+
+
+FAIL "About front and back. - back returns the correct answer and flips if neccesary." at (t_core.clj:36)
+    Expected: 1
+      Actual: nil
+FAILURE: 1 check failed.  (But 24 succeeded.)
+Subprocess failed
+
+
+** Details for front references the back list
+
+
+FAIL "About front and back. - front returns the correct answer and flips if neccesary." at (t_core.clj:33)
+    Expected: 2
+      Actual: nil
+
+FAIL "About front and back. - front returns the correct answer and flips if neccesary." at (t_core.clj:34)
+    Expected: 1
+      Actual: nil
+FAILURE: 2 checks failed.  (But 23 succeeded.)
+Subprocess failed
+
+
+** Details for flip-front flips always
+
+
+FAIL "About flip front and flip back. - flip front does nothing when it should." at (t_core.clj:24)
+    Expected: {:back clojure.lang.PersistentList$EmptyList@1, :front (1), :size 1}::deque.core.Deque
+      Actual: {:back clojure.lang.PersistentList$EmptyList@1, :front clojure.lang.PersistentList$EmptyList@1, :size 1}::deque.core.Deque
+
+FAIL "About front and back. - front returns the correct answer and flips if neccesary." at (t_core.clj:33)
+    Expected: 2
+      Actual: nil
+
+FAIL "About pop front and pop back. - pop front works on non empty deques." at (t_core.clj:42)
+    Expected: {:back clojure.lang.PersistentList$EmptyList@1, :front (1), :size 1}::deque.core.Deque
+      Actual: {:back clojure.lang.PersistentList$EmptyList@1, :front clojure.lang.PersistentList$EmptyList@1, :size 1}::deque.core.Deque
+FAILURE: 3 checks failed.  (But 22 succeeded.)
+Subprocess failed

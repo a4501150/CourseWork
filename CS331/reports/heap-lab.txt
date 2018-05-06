@@ -1,0 +1,100 @@
+Lab report for Heap Lab - jli134
+Timestamp: 2014-12-02 11:07:02
+
+|  :scenario |                                   :title |                                   :result | :score |
+|------------+------------------------------------------+-------------------------------------------+--------|
+|    working |    Test student code vs instructor tests |                                           |        |
+| qualifying |    Test student tests vs instructor code |                                      Pass |      5 |
+|    broke-1 |         Heap add doesn't increment size. | Fail: Student tests did not detect error. |      0 |
+|    broke-2 |              Move up only moves up once. | Fail: Student tests did not detect error. |      0 |
+|    broke-3 |           Percolate down only goes left. | Fail: Student tests did not detect error. |      0 |
+|    broke-4 | Percolate down right swaps never happen. | Fail: Student tests did not detect error. |      0 |
+|    broke-5 |           Delete doesn't decrement size. | Fail: Student tests did not detect error. |      0 |
+|      total |                              Total Score |                                           |      5 |
+
+Details:
+
+
+** Details for Test student code vs instructor tests
+
+Exception in thread "main" java.lang.ClassNotFoundException: heap_lab.core.Heap
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at clojure.lang.DynamicClassLoader.findClass(DynamicClassLoader.java:61)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:191)
+	at heap_lab.t_core$eval8046$loading__4910__auto____8047.invoke(t_core.clj:1)
+	at heap_lab.t_core$eval8046.invoke(t_core.clj:1)
+	at clojure.lang.Compiler.eval(Compiler.java:6619)
+	at clojure.lang.Compiler.eval(Compiler.java:6608)
+	at clojure.lang.Compiler.load(Compiler.java:7064)
+	at clojure.lang.RT.loadResourceScript(RT.java:370)
+	at clojure.lang.RT.loadResourceScript(RT.java:361)
+	at clojure.lang.RT.load(RT.java:440)
+	at clojure.lang.RT.load(RT.java:411)
+	at clojure.core$load$fn__5018.invoke(core.clj:5530)
+	at clojure.core$load.doInvoke(core.clj:5529)
+	at clojure.lang.RestFn.invoke(RestFn.java:408)
+	at clojure.core$load_one.invoke(core.clj:5336)
+	at clojure.core$load_lib$fn__4967.invoke(core.clj:5375)
+	at clojure.core$load_lib.doInvoke(core.clj:5374)
+	at clojure.lang.RestFn.applyTo(RestFn.java:142)
+	at clojure.core$apply.invoke(core.clj:619)
+	at clojure.core$load_libs.doInvoke(core.clj:5413)
+	at clojure.lang.RestFn.applyTo(RestFn.java:137)
+	at clojure.core$apply.invoke(core.clj:619)
+	at clojure.core$require.doInvoke(core.clj:5496)
+	at clojure.lang.RestFn.invoke(RestFn.java:421)
+	at midje.repl$load_facts$fn__7979.invoke(repl.clj:206)
+	at midje.repl$load_facts.doInvoke(repl.clj:192)
+	at clojure.lang.RestFn.invoke(RestFn.java:397)
+	at user$eval8042.invoke(form-init4525905918951646866.clj:1)
+	at clojure.lang.Compiler.eval(Compiler.java:6619)
+	at clojure.lang.Compiler.eval(Compiler.java:6609)
+	at clojure.lang.Compiler.load(Compiler.java:7064)
+	at clojure.lang.Compiler.loadFile(Compiler.java:7020)
+	at clojure.main$load_script.invoke(main.clj:294)
+	at clojure.main$init_opt.invoke(main.clj:299)
+	at clojure.main$initialize.invoke(main.clj:327)
+	at clojure.main$null_opt.invoke(main.clj:362)
+	at clojure.main$main.doInvoke(main.clj:440)
+	at clojure.lang.RestFn.invoke(RestFn.java:421)
+	at clojure.lang.Var.invoke(Var.java:419)
+	at clojure.lang.AFn.applyToHelper(AFn.java:163)
+	at clojure.lang.Var.applyTo(Var.java:532)
+	at clojure.main.main(main.java:37)
+Subprocess failed
+
+
+** Details for Test student tests vs instructor code
+
+All checks (2) succeeded.
+
+
+** Details for Heap add doesn't increment size.
+
+All checks (2) succeeded.
+
+
+** Details for Move up only moves up once.
+
+All checks (2) succeeded.
+
+
+** Details for Percolate down only goes left.
+
+All checks (2) succeeded.
+
+
+** Details for Percolate down right swaps never happen.
+
+All checks (2) succeeded.
+
+
+** Details for Delete doesn't decrement size.
+
+All checks (2) succeeded.
