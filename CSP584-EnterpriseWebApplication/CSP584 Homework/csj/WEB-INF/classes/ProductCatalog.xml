@@ -1,0 +1,864 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ProductCatalog>
+
+	
+		<Product id="1" Cat="SmartWatch">
+			<name>smartwatch</name>
+			<price>399.99</price>
+			<image>\csj\images\SmartWatch.png</image>
+			<manufacturer>Apple</manufacturer>
+			<condition>New</condition>
+			<discount>10.0</discount>
+			<accessories>
+				<accessory>EarPhone</accessory>
+			</accessories>
+		</Product>
+		
+		<Product id="2" Cat="SmartWatch">
+			<name>smartwatch</name>
+			<price>399.99</price>
+			<image>\csj\images\SmartWatch.png</image>
+			<manufacturer>Apple</manufacturer>
+			<condition>New</condition>
+			<discount>10.0</discount>
+			<accessories>
+				<accessory>EarPhone</accessory>
+			</accessories>
+		</Product>
+		
+		<Product id="3" Cat="SmartWatch">
+			<name>smartwatch</name>
+			<price>399.99</price>
+			<image>\csj\images\SmartWatch.png</image>
+			<manufacturer>Apple</manufacturer>
+			<condition>New</condition>
+			<discount>10.0</discount>
+			<accessories>
+				<accessory>EarPhone</accessory>
+			</accessories>
+		</Product>
+		
+		<Product id="4" Cat="SmartWatch">
+			<name>smartwatch</name>
+			<price>399.99</price>
+			<image>\csj\images\SmartWatch.png</image>
+			<manufacturer>Apple</manufacturer>
+			<condition>New</condition>
+			<discount>10.0</discount>
+			<accessories>
+				<accessory>EarPhone</accessory>
+			</accessories>
+		</Product>
+		
+		<Product id="5" Cat="SmartWatch">
+			<name>smartwatch</name>
+			<price>399.99</price>
+			<image>\csj\images\SmartWatch.png</image>
+			<manufacturer>Apple</manufacturer>
+			<condition>New</condition>
+			<discount>10.0</discount>
+			<accessories>
+				<accessory>EarPhone</accessory>
+			</accessories>
+		</Product>
+		
+		
+		<Product id="6" Cat="ClassicWatch">
+			<name>ClassicWatch</name>
+			<price>699.99</price>
+			<image>\csj\images\ClassicWatch.png</image>
+			<manufacturer>Apple</manufacturer>
+			<condition>New</condition>
+			<discount>10.0</discount>
+			<accessories>
+				<accessory>EarPhone</accessory>
+			</accessories>
+		</Product>
+		
+		<Product id="7" Cat="ClassicWatch">
+			<name>ClassicWatch</name>
+			<price>699.99</price>
+			<image>\csj\images\ClassicWatch.png</image>
+			<manufacturer>Apple</manufacturer>
+			<condition>New</condition>
+			<discount>10.0</discount>
+			<accessories>
+				<accessory>EarPhone</accessory>
+			</accessories>
+		</Product>
+		
+		<Product id="8" Cat="ClassicWatch">
+			<name>ClassicWatch</name>
+			<price>699.99</price>
+			<image>\csj\images\ClassicWatch.png</image>
+			<manufacturer>Apple</manufacturer>
+			<condition>New</condition>
+			<discount>10.0</discount>
+			<accessories>
+				<accessory>EarPhone</accessory>
+			</accessories>
+		</Product>
+		
+		<Product id="9" Cat="ClassicWatch">
+			<name>ClassicWatch</name>
+			<price>699.99</price>
+			<image>\csj\images\ClassicWatch.png</image>
+			<manufacturer>Apple</manufacturer>
+			<condition>New</condition>
+			<discount>10.0</discount>
+			<accessories>
+				<accessory>EarPhone</accessory>
+			</accessories>
+		</Product>
+		
+		<Product id="10" Cat="ClassicWatch">
+			<name>ClassicWatch</name>
+			<price>699.99</price>
+			<image>\csj\images\ClassicWatch.png</image>
+			<manufacturer>Apple</manufacturer>
+			<condition>New</condition>
+			<discount>10.0</discount>
+			<accessories>
+				<accessory>EarPhone</accessory>
+			</accessories>
+		</Product>	
+
+	
+	
+		<Product id="11" Cat="BigSpeaker">
+			<name>BigSpeaker</name>
+			<price>100</price>
+			<image>BigSpeaker.png</image>
+			<manufacturer>Microsoft</manufacturer>
+			<condition>New</condition>
+			<discount>10.0</discount>
+			<accessories>
+				<accessory>Laptop</accessory>
+				<accessory>SmartPhone</accessory>
+			</accessories>
+		</Product>
+		
+		<Product id="12" Cat="BigSpeaker">
+			<name>BigSpeaker</name>
+			<price>100</price>
+			<image>BigSpeaker.png</image>
+			<manufacturer>Microsoft</manufacturer>
+			<condition>New</condition>
+			<discount>10.0</discount>
+			<accessories>
+				<accessory>Laptop</accessory>
+				<accessory>SmartPhone</accessory>
+			</accessories>
+		</Product>
+
+		<Product id="13" Cat="BigSpeaker">
+			<name>BigSpeaker</name>
+			<price>100</price>
+			<image>BigSpeaker.png</image>
+			<manufacturer>Microsoft</manufacturer>
+			<condition>New</condition>
+			<discount>10.0</discount>
+			<accessories>
+				<accessory>Laptop</accessory>
+				<accessory>SmartPhone</accessory>
+			</accessories>
+		</Product>
+		
+		<Product id="14" Cat="BigSpeaker">
+			<name>BigSpeaker</name>
+			<price>100</price>
+			<image>BigSpeaker.png</image>
+			<manufacturer>Microsoft</manufacturer>
+			<condition>New</condition>
+			<discount>10.0</discount>
+			<accessories>
+				<accessory>Laptop</accessory>
+				<accessory>SmartPhone</accessory>
+			</accessories>
+		</Product>
+		
+		<Product id="15" Cat="BigSpeaker">
+			<name>BigSpeaker</name>
+			<price>100</price>
+			<image>BigSpeaker.png</image>
+			<manufacturer>Microsoft</manufacturer>
+			<condition>New</condition>
+			<discount>10.0</discount>
+			<accessories>
+				<accessory>Laptop</accessory>
+				<accessory>SmartPhone</accessory>
+			</accessories>
+		</Product>
+		
+		
+		
+		<Product id="16" Cat="SmallSpeaker">
+			<name>SmallSpeaker</name>
+			<price>399.99</price>
+			<image>SmallSpeaker.png</image>
+			<manufacturer>MicrosoftSmall</manufacturer>
+			<condition>New</condition>
+			<discount>10.0</discount>
+			<accessories>
+				<accessory>Laptop</accessory>
+				<accessory>SmartPhone</accessory>
+			</accessories>
+		</Product>
+		
+		<Product id="17" Cat="SmallSpeaker">
+			<name>SmallSpeaker</name>
+			<price>399.99</price>
+			<image>SmallSpeaker.png</image>
+			<manufacturer>MicrosoftSmall</manufacturer>
+			<condition>New</condition>
+			<discount>10.0</discount>
+			<accessories>
+				<accessory>Laptop</accessory>
+				<accessory>SmartPhone</accessory>
+			</accessories>
+		</Product>
+		
+		<Product id="18" Cat="SmallSpeaker">
+			<name>SmallSpeaker</name>
+			<price>399.99</price>
+			<image>SmallSpeaker.png</image>
+			<manufacturer>MicrosoftSmall</manufacturer>
+			<condition>New</condition>
+			<discount>10.0</discount>
+			<accessories>
+				<accessory>Laptop</accessory>
+				<accessory>SmartPhone</accessory>
+			</accessories>
+		</Product>
+		
+		<Product id="19" Cat="SmallSpeaker">
+			<name>SmallSpeaker</name>
+			<price>399.99</price>
+			<image>SmallSpeaker.png</image>
+			<manufacturer>MicrosoftSmall</manufacturer>
+			<condition>New</condition>
+			<discount>10.0</discount>
+			<accessories>
+				<accessory>Laptop</accessory>
+				<accessory>SmartPhone</accessory>
+			</accessories>
+		</Product>
+		
+		<Product id="20" Cat="SmallSpeaker">
+			<name>SmallSpeaker</name>
+			<price>399.99</price>
+			<image>SmallSpeaker.png</image>
+			<manufacturer>MicrosoftSmall</manufacturer>
+			<condition>New</condition>
+			<discount>10.0</discount>
+			<accessories>
+				<accessory>Laptop</accessory>
+				<accessory>SmartPhone</accessory>
+			</accessories>
+		</Product>
+	
+	
+	
+	
+		<Product id="21" Cat="HeadPhone">
+			<name>HeadPhone</name>
+			<price>299.99</price>
+			<image>HeadPhone.png</image>
+			<manufacturer>Microsoft</manufacturer>
+			<condition>New</condition>
+			<discount>10.0</discount>
+			<accessories>
+				<accessory>Laptop</accessory>
+				<accessory>SmartPhone</accessory>
+			</accessories>
+		</Product>
+		
+		<Product id="22" Cat="HeadPhone">
+			<name>HeadPhone</name>
+			<price>299.99</price>
+			<image>HeadPhone.png</image>
+			<manufacturer>Microsoft</manufacturer>
+			<condition>New</condition>
+			<discount>10.0</discount>
+			<accessories>
+				<accessory>Laptop</accessory>
+				<accessory>SmartPhone</accessory>
+			</accessories>
+		</Product>
+		
+		<Product id="23" Cat="HeadPhone">
+			<name>HeadPhone</name>
+			<price>299.99</price>
+			<image>HeadPhone.png</image>
+			<manufacturer>Microsoft</manufacturer>
+			<condition>New</condition>
+			<discount>10.0</discount>
+			<accessories>
+				<accessory>Laptop</accessory>
+				<accessory>SmartPhone</accessory>
+			</accessories>
+		</Product>
+		
+		
+		<Product id="24" Cat="HeadPhone">
+			<name>HeadPhone</name>
+			<price>299.99</price>
+			<image>HeadPhone.png</image>
+			<manufacturer>Microsoft</manufacturer>
+			<condition>New</condition>
+			<discount>10.0</discount>
+			<accessories>
+				<accessory>Laptop</accessory>
+				<accessory>SmartPhone</accessory>
+			</accessories>
+		</Product>
+		
+		
+		<Product id="25" Cat="HeadPhone">
+			<name>HeadPhone</name>
+			<price>299.99</price>
+			<image>HeadPhone.png</image>
+			<manufacturer>Microsoft</manufacturer>
+			<condition>New</condition>
+			<discount>10.0</discount>
+			<accessories>
+				<accessory>Laptop</accessory>
+				<accessory>SmartPhone</accessory>
+			</accessories>
+		</Product>
+		
+		
+		<Product id="26" Cat="HeadPhone">
+			<name>HeadPhone</name>
+			<price>299.99</price>
+			<image>HeadPhone.png</image>
+			<manufacturer>Microsoft</manufacturer>
+			<condition>New</condition>
+			<discount>10.0</discount>
+			<accessories>
+				<accessory>Laptop</accessory>
+				<accessory>SmartPhone</accessory>
+			</accessories>
+		</Product>
+		
+		
+		<Product id="27" Cat="HeadPhone">
+			<name>HeadPhone</name>
+			<price>299.99</price>
+			<image>HeadPhone.png</image>
+			<manufacturer>Microsoft</manufacturer>
+			<condition>New</condition>
+			<discount>10.0</discount>
+			<accessories>
+				<accessory>Laptop</accessory>
+				<accessory>SmartPhone</accessory>
+			</accessories>
+		</Product>
+		
+		
+		<Product id="28" Cat="HeadPhone">
+			<name>HeadPhone</name>
+			<price>299.99</price>
+			<image>HeadPhone.png</image>
+			<manufacturer>Microsoft</manufacturer>
+			<condition>New</condition>
+			<discount>10.0</discount>
+			<accessories>
+				<accessory>Laptop</accessory>
+				<accessory>SmartPhone</accessory>
+			</accessories>
+		</Product>
+		
+		
+		<Product id="29" Cat="HeadPhone">
+			<name>HeadPhone</name>
+			<price>299.99</price>
+			<image>HeadPhone.png</image>
+			<manufacturer>Microsoft</manufacturer>
+			<condition>New</condition>
+			<discount>10.0</discount>
+			<accessories>
+				<accessory>Laptop</accessory>
+				<accessory>SmartPhone</accessory>
+			</accessories>
+		</Product>
+		
+		<Product id="30" Cat="EarPhone">
+			<name>Ear Phone</name>
+			<price>59.99</price>
+			<image>EarPhone.png</image>
+			<manufacturer>Microsoft</manufacturer>
+			<condition>New</condition>
+			<discount>0.0</discount>
+			<accessories>
+				<accessory>Laptop</accessory>
+				<accessory>SmartPhone</accessory>
+				<accessory>SmartWatch</accessory>
+				<accessory>ClassicWatch</accessory>
+			</accessories>
+		</Product>
+		
+
+	
+	
+		<Product id="31" Cat="SmartPhone">
+			<name>SmartPhone</name>
+			<price>899.99</price>
+			<image>SmartPhone.png</image>
+			<manufacturer>Apple Inc</manufacturer>
+			<condition>New</condition>
+			<discount>2.0</discount>
+			<accessories>
+				<accessory>EarPhone</accessory>
+				<accessory>HeadPhone</accessory>
+				<accessory>BigSpeaker</accessory>
+				<accessory>SmallSpeaker</accessory>
+			</accessories>
+		</Product>
+		
+		<Product id="32" Cat="SmartPhone">
+			<name>SmartPhone</name>
+			<price>899.99</price>
+			<image>SmartPhone.png</image>
+			<manufacturer>Apple Inc</manufacturer>
+			<condition>New</condition>
+			<discount>2.0</discount>
+			<accessories>
+				<accessory>EarPhone</accessory>
+				<accessory>HeadPhone</accessory>
+				<accessory>BigSpeaker</accessory>
+				<accessory>SmallSpeaker</accessory>
+			</accessories>
+		</Product>
+
+		<Product id="33" Cat="SmartPhone">
+			<name>SmartPhone</name>
+			<price>899.99</price>
+			<image>SmartPhone.png</image>
+			<manufacturer>Apple Inc</manufacturer>
+			<condition>New</condition>
+			<discount>2.0</discount>
+			<accessories>
+				<accessory>EarPhone</accessory>
+				<accessory>HeadPhone</accessory>
+				<accessory>BigSpeaker</accessory>
+				<accessory>SmallSpeaker</accessory>
+			</accessories>
+		</Product>
+
+		<Product id="34" Cat="SmartPhone">
+			<name>SmartPhone</name>
+			<price>899.99</price>
+			<image>SmartPhone.png</image>
+			<manufacturer>Apple Inc</manufacturer>
+			<condition>New</condition>
+			<discount>2.0</discount>
+			<accessories>
+				<accessory>EarPhone</accessory>
+				<accessory>HeadPhone</accessory>
+				<accessory>BigSpeaker</accessory>
+				<accessory>SmallSpeaker</accessory>
+			</accessories>
+		</Product>
+
+		<Product id="35" Cat="SmartPhone">
+			<name>SmartPhone</name>
+			<price>899.99</price>
+			<image>SmartPhone.png</image>
+			<manufacturer>Apple Inc</manufacturer>
+			<condition>New</condition>
+			<discount>2.0</discount>
+			<accessories>
+				<accessory>EarPhone</accessory>
+				<accessory>HeadPhone</accessory>
+				<accessory>BigSpeaker</accessory>
+				<accessory>SmallSpeaker</accessory>
+			</accessories>
+		</Product>
+
+		<Product id="36" Cat="SmartPhone">
+			<name>SmartPhone</name>
+			<price>899.99</price>
+			<image>SmartPhone.png</image>
+			<manufacturer>Apple Inc</manufacturer>
+			<condition>New</condition>
+			<discount>2.0</discount>
+			<accessories>
+				<accessory>EarPhone</accessory>
+				<accessory>HeadPhone</accessory>
+				<accessory>BigSpeaker</accessory>
+				<accessory>SmallSpeaker</accessory>
+			</accessories>
+		</Product>
+
+		<Product id="37" Cat="SmartPhone">
+			<name>SmartPhone</name>
+			<price>899.99</price>
+			<image>SmartPhone.png</image>
+			<manufacturer>Apple Inc</manufacturer>
+			<condition>New</condition>
+			<discount>2.0</discount>
+			<accessories>
+				<accessory>EarPhone</accessory>
+				<accessory>HeadPhone</accessory>
+				<accessory>BigSpeaker</accessory>
+				<accessory>SmallSpeaker</accessory>
+			</accessories>
+		</Product>
+
+		<Product id="38" Cat="SmartPhone">
+			<name>SmartPhone</name>
+			<price>899.99</price>
+			<image>SmartPhone.png</image>
+			<manufacturer>Apple Inc</manufacturer>
+			<condition>New</condition>
+			<discount>2.0</discount>
+			<accessories>
+				<accessory>EarPhone</accessory>
+				<accessory>HeadPhone</accessory>
+				<accessory>BigSpeaker</accessory>
+				<accessory>SmallSpeaker</accessory>
+			</accessories>
+		</Product>
+
+		<Product id="39" Cat="SmartPhone">
+			<name>SmartPhone</name>
+			<price>899.99</price>
+			<image>SmartPhone.png</image>
+			<manufacturer>Apple Inc</manufacturer>
+			<condition>New</condition>
+			<discount>2.0</discount>
+			<accessories>
+				<accessory>EarPhone</accessory>
+				<accessory>HeadPhone</accessory>
+				<accessory>BigSpeaker</accessory>
+				<accessory>SmallSpeaker</accessory>
+			</accessories>
+		</Product>
+
+		<Product id="40" Cat="SmartPhone">
+			<name>SmartPhone</name>
+			<price>899.99</price>
+			<image>SmartPhone.png</image>
+			<manufacturer>Apple Inc</manufacturer>
+			<condition>New</condition>
+			<discount>2.0</discount>
+			<accessories>
+				<accessory>EarPhone</accessory>
+				<accessory>HeadPhone</accessory>
+				<accessory>BigSpeaker</accessory>
+				<accessory>SmallSpeaker</accessory>
+			</accessories>
+		</Product>
+	
+	
+	
+	
+		<Product id="41" Cat="Laptop">
+			<name>Laptop</name>
+			<price>1399.99</price>
+			<image>Laptop.png</image>
+			<manufacturer>Microsoft</manufacturer>
+			<condition>New</condition>
+			<discount>0.0</discount>
+			<accessories>
+				<accessory>EarPhone</accessory>
+				<accessory>HeadPhone</accessory>
+				<accessory>BigSpeaker</accessory>
+				<accessory>SmallSpeaker</accessory>
+				<accessory>HardDrive</accessory>
+				<accessory>MemoryCard</accessory>
+				<accessory>FlashDrive</accessory>
+			</accessories>
+		</Product>
+
+		<Product id="42" Cat="Laptop">
+			<name>Laptop</name>
+			<price>1399.99</price>
+			<image>Laptop.png</image>
+			<manufacturer>Microsoft</manufacturer>
+			<condition>New</condition>
+			<discount>0.0</discount>
+			<accessories>
+				<accessory>EarPhone</accessory>
+				<accessory>HeadPhone</accessory>
+				<accessory>BigSpeaker</accessory>
+				<accessory>SmallSpeaker</accessory>
+				<accessory>HardDrive</accessory>
+				<accessory>MemoryCard</accessory>
+				<accessory>FlashDrive</accessory>
+			</accessories>
+		</Product>
+		
+		<Product id="43" Cat="Laptop">
+			<name>Laptop</name>
+			<price>1399.99</price>
+			<image>Laptop.png</image>
+			<manufacturer>Microsoft</manufacturer>
+			<condition>New</condition>
+			<discount>0.0</discount>
+			<accessories>
+				<accessory>EarPhone</accessory>
+				<accessory>HeadPhone</accessory>
+				<accessory>BigSpeaker</accessory>
+				<accessory>SmallSpeaker</accessory>
+				<accessory>HardDrive</accessory>
+				<accessory>MemoryCard</accessory>
+				<accessory>FlashDrive</accessory>
+			</accessories>
+		</Product>
+		
+		<Product id="44" Cat="Laptop">
+			<name>Laptop</name>
+			<price>1399.99</price>
+			<image>Laptop.png</image>
+			<manufacturer>Microsoft</manufacturer>
+			<condition>New</condition>
+			<discount>0.0</discount>
+			<accessories>
+				<accessory>EarPhone</accessory>
+				<accessory>HeadPhone</accessory>
+				<accessory>BigSpeaker</accessory>
+				<accessory>SmallSpeaker</accessory>
+				<accessory>HardDrive</accessory>
+				<accessory>MemoryCard</accessory>
+				<accessory>FlashDrive</accessory>
+			</accessories>
+		</Product>
+		
+		<Product id="45" Cat="Laptop">
+			<name>Laptop</name>
+			<price>1399.99</price>
+			<image>Laptop.png</image>
+			<manufacturer>Microsoft</manufacturer>
+			<condition>New</condition>
+			<discount>0.0</discount>
+			<accessories>
+				<accessory>EarPhone</accessory>
+				<accessory>HeadPhone</accessory>
+				<accessory>BigSpeaker</accessory>
+				<accessory>SmallSpeaker</accessory>
+				<accessory>HardDrive</accessory>
+				<accessory>MemoryCard</accessory>
+				<accessory>FlashDrive</accessory>
+			</accessories>
+		</Product>
+		
+		<Product id="46" Cat="Laptop">
+			<name>Laptop</name>
+			<price>1399.99</price>
+			<image>Laptop.png</image>
+			<manufacturer>Microsoft</manufacturer>
+			<condition>New</condition>
+			<discount>0.0</discount>
+			<accessories>
+				<accessory>EarPhone</accessory>
+				<accessory>HeadPhone</accessory>
+				<accessory>BigSpeaker</accessory>
+				<accessory>SmallSpeaker</accessory>
+				<accessory>HardDrive</accessory>
+				<accessory>MemoryCard</accessory>
+				<accessory>FlashDrive</accessory>
+			</accessories>
+		</Product>
+		
+		<Product id="47" Cat="Laptop">
+			<name>Laptop</name>
+			<price>1399.99</price>
+			<image>Laptop.png</image>
+			<manufacturer>Microsoft</manufacturer>
+			<condition>New</condition>
+			<discount>0.0</discount>
+			<accessories>
+				<accessory>EarPhone</accessory>
+				<accessory>HeadPhone</accessory>
+				<accessory>BigSpeaker</accessory>
+				<accessory>SmallSpeaker</accessory>
+				<accessory>HardDrive</accessory>
+				<accessory>MemoryCard</accessory>
+				<accessory>FlashDrive</accessory>
+			</accessories>
+		</Product>
+		
+		<Product id="48" Cat="Laptop">
+			<name>Laptop</name>
+			<price>1399.99</price>
+			<image>Laptop.png</image>
+			<manufacturer>Microsoft</manufacturer>
+			<condition>New</condition>
+			<discount>0.0</discount>
+			<accessories>
+				<accessory>EarPhone</accessory>
+				<accessory>HeadPhone</accessory>
+				<accessory>BigSpeaker</accessory>
+				<accessory>SmallSpeaker</accessory>
+				<accessory>HardDrive</accessory>
+				<accessory>MemoryCard</accessory>
+				<accessory>FlashDrive</accessory>
+			</accessories>
+		</Product>
+		
+		<Product id="49" Cat="Laptop">
+			<name>Laptop</name>
+			<price>1399.99</price>
+			<image>Laptop.png</image>
+			<manufacturer>Microsoft</manufacturer>
+			<condition>New</condition>
+			<discount>0.0</discount>
+			<accessories>
+				<accessory>EarPhone</accessory>
+				<accessory>HeadPhone</accessory>
+				<accessory>BigSpeaker</accessory>
+				<accessory>SmallSpeaker</accessory>
+				<accessory>HardDrive</accessory>
+				<accessory>MemoryCard</accessory>
+				<accessory>FlashDrive</accessory>
+			</accessories>
+		</Product>
+		
+		<Product id="50" Cat="Laptop">
+			<name>Laptop</name>
+			<price>1399.99</price>
+			<image>Laptop.png</image>
+			<manufacturer>Microsoft</manufacturer>
+			<condition>New</condition>
+			<discount>0.0</discount>
+			<accessories>
+				<accessory>EarPhone</accessory>
+				<accessory>HeadPhone</accessory>
+				<accessory>BigSpeaker</accessory>
+				<accessory>SmallSpeaker</accessory>
+				<accessory>HardDrive</accessory>
+				<accessory>MemoryCard</accessory>
+				<accessory>FlashDrive</accessory>
+			</accessories>
+		</Product>
+		
+	
+	
+	
+	
+		<Product id="51" Cat="HardDrive">
+			<name>Hard Drive</name>
+			<price>39.99</price>
+			<image>HardDrive.png</image>
+			<manufacturer>A</manufacturer>
+			<condition>New</condition>
+			<discount>6.0</discount>
+			<accessories>
+				<accessory>Laptop</accessory>
+			</accessories>
+		</Product>
+		
+		<Product id="52" Cat="HardDrive">
+			<name>Hard Drive</name>
+			<price>39.99</price>
+			<image>HardDrive.png</image>
+			<manufacturer>A</manufacturer>
+			<condition>New</condition>
+			<discount>6.0</discount>
+			<accessories>
+				<accessory>Laptop</accessory>
+			</accessories>
+		</Product>
+		
+		<Product id="53" Cat="HardDrive">
+			<name>Hard Drive</name>
+			<price>39.99</price>
+			<image>HardDrive.png</image>
+			<manufacturer>A</manufacturer>
+			<condition>New</condition>
+			<discount>6.0</discount>
+			<accessories>
+				<accessory>Laptop</accessory>
+			</accessories>
+		</Product>
+		
+		<Product id="54" Cat="FlashDrive">
+			<name>Flash Drive</name>
+			<price>55.99</price>
+			<image>FlashDrive.png</image>
+			<manufacturer>FlashDriveMan</manufacturer>
+			<condition>New</condition>
+			<discount>30.0</discount>
+			<accessories>
+				<accessory>Laptop</accessory>
+			</accessories>
+		</Product>
+		
+		<Product id="55" Cat="FlashDrive">
+			<name>Flash Drive</name>
+			<price>55.99</price>
+			<image>FlashDrive.png</image>
+			<manufacturer>FlashDriveMan</manufacturer>
+			<condition>New</condition>
+			<discount>30.0</discount>
+			<accessories>
+				<accessory>Laptop</accessory>
+			</accessories>
+		</Product>
+		
+		<Product id="56" Cat="FlashDrive">
+			<name>Flash Drive</name>
+			<price>55.99</price>
+			<image>FlashDrive.png</image>
+			<manufacturer>FlashDriveMan</manufacturer>
+			<condition>New</condition>
+			<discount>30.0</discount>
+			<accessories>
+				<accessory>Laptop</accessory>
+			</accessories>
+		</Product>
+		
+		<Product id="57" Cat="MemoryCard">
+			<name>Memory Card</name>
+			<price>88.99</price>
+			<image>MemoryCard.png</image>
+			<manufacturer>MemoryCardM</manufacturer>
+			<condition>New</condition>
+			<discount>0.0</discount>
+			<accessories>
+				<accessory>Laptop</accessory>
+			</accessories>
+		</Product>
+		
+		<Product id="58" Cat="MemoryCard">
+			<name>Memory Card</name>
+			<price>88.99</price>
+			<image>MemoryCard.png</image>
+			<manufacturer>MemoryCardM</manufacturer>
+			<condition>New</condition>
+			<discount>0.0</discount>
+			<accessories>
+				<accessory>Laptop</accessory>
+			</accessories>
+		</Product>
+		
+		<Product id="59" Cat="MemoryCard">
+			<name>Memory Card</name>
+			<price>88.99</price>
+			<image>MemoryCard.png</image>
+			<manufacturer>MemoryCardM</manufacturer>
+			<condition>New</condition>
+			<discount>0.0</discount>
+			<accessories>
+				<accessory>Laptop</accessory>
+			</accessories>
+		</Product>
+		
+		<Product id="60" Cat="MemoryCard">
+			<name>Memory Card</name>
+			<price>88.99</price>
+			<image>MemoryCard.png</image>
+			<manufacturer>MemoryCardM</manufacturer>
+			<condition>New</condition>
+			<discount>0.0</discount>
+			<accessories>
+				<accessory>Laptop</accessory>
+			</accessories>
+		</Product>
+		
+		
+	
+	
+</ProductCatalog>

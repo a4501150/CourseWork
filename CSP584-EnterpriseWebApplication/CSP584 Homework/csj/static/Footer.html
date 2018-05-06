@@ -1,0 +1,207 @@
+    </div>
+	
+	<footer>
+        <!-- <div class="footer-content">
+            <ul>
+            	<li><h4>Proin accumsan</h4></li>
+                <li><a href="#">Rutrum nulla a ultrices</a></li>
+                <li><a href="#">Blandit elementum</a></li>
+                <li><a href="#">Proin placerat accumsan</a></li>
+                <li><a href="#">Morbi hendrerit libero </a></li>
+                <li><a href="#">Curabitur sit amet tellus</a></li>
+            </ul>
+            
+            <ul>
+            	<li><h4>Condimentum</h4></li>
+                <li><a href="#">Curabitur sit amet tellus</a></li>
+                <li><a href="#">Morbi hendrerit libero </a></li>
+                <li><a href="#">Proin placerat accumsan</a></li>
+                <li><a href="#">Rutrum nulla a ultrices</a></li>
+                <li><a href="#">Cras dictum</a></li>
+            </ul>
+            
+            <ul class="endfooter">
+            	<li><h4>Suspendisse</h4></li>
+                <li><a href="#">Morbi hendrerit libero </a></li>
+                <li><a href="#">Proin placerat accumsan</a></li>
+                <li><a href="#">Rutrum nulla a ultrices</a></li>
+                <li><a href="#">Curabitur sit amet tellus</a></li>
+                <li><a href="#">Donec in ligula nisl.</a></li>
+            </ul>
+            
+            <div class="clear"></div>
+        </div> -->
+        <div class="footer-bottom">
+            <p>&copy; 2017. <a href="#">Homework #1</a> by Jinyang</p>
+         </div>
+    </footer>
+</div>
+</body>
+
+
+<script>
+		
+			$(window).on('load', function(){
+				viewCart();
+			});
+			
+			$("#addToCartBtn").on("click", function(e) { 
+			
+			e.preventDefault();
+			
+			var pid = getPIDfromPara();
+			
+                $.get("Cart?sender=ajax&action=add&pid=" + pid, function(responseText) {    
+
+                    if(responseText=="add_done") { 
+					
+					viewCart();
+					
+					} else {
+					
+					alert("add fault");
+					
+					}
+					
+                });
+				
+				
+            });
+		
+			$("#cart_clean").on("click", function(e) { 
+			
+			e.preventDefault();
+			
+			
+                $.get("Cart?sender=ajax&action=clear&pid=", function(responseText) {    
+
+                    if(responseText=="clear_done") { 
+					
+					viewCart();
+					
+					} else {
+					
+					alert("clear fault");
+					
+					}
+					
+                });
+				
+				
+            });
+		
+		
+			function getPIDfromPara(){
+			
+			var url = window.location.href;
+			var arguments = url.split('?')[1].split('=');
+			
+			return arguments[1];
+			}
+		
+		
+			function viewCart(){
+			
+			$.get("Cart?sender=ajax&action=view", function(responseText) {    
+					$("#ajaxCart").html(responseText);  
+                });
+
+			}
+		
+
+			
+
+			
+			
+			$(document).on('click','.delbutton',function(e){
+			
+			var a_href = $(this).attr('href');
+			
+			console.log(a_href);
+			
+			e.preventDefault();
+			
+            $.get(a_href, function(responseText) {    
+
+            if(responseText=="del_done") {   
+					viewCart();
+			} else {
+				alert("del fault")
+			}
+					
+                });
+			});
+			
+			
+			$(document).on('click','#saleDel',function(e){
+			
+			var a_href = $(this).attr('href');
+			
+			console.log(a_href);
+			
+			e.preventDefault();
+			
+            $.get(a_href, function(responseText) {    
+
+            if(responseText=="del_done") {   
+					alert("delete done");
+					
+					location.reload(true);
+					
+			} else {
+				alert("del fault")
+			}
+					
+                });
+			});
+			
+			$(document).on('click','#managerDel',function(e){
+			
+			var a_href = $(this).attr('href');
+			
+			console.log(a_href);
+			
+			e.preventDefault();
+			
+            $.get(a_href, function(responseText) {    
+
+            if(responseText=="del_done") {   
+					alert("delete done");
+					
+					location.reload(true);
+					
+			} else {
+				alert("del fault")
+			}
+					
+                });
+			});
+			
+			
+			$(document).on('click','#writeReviewBtn',function(e){
+			
+			var a_href = $(this).attr('href');
+			
+			console.log(a_href);
+			
+			e.preventDefault();
+			
+            $.get(a_href+$('#reviewForm').serialize(), function(responseText) {     
+
+            if(responseText=="add_done") {   
+					alert("add_done");
+					location.reload(true);
+					
+			} else {
+				alert("add_failed, please login first")
+			}
+					
+                });
+			});
+			
+			
+
+			
+</script>
+
+</html>

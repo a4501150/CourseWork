@@ -1,0 +1,7 @@
+C:\Users\Jinyang\Source\Repos\SimpleRFDS\SimpleRFDS.FileServer\bin\Debug\SimpleRFDS.FileServer.exe.config
+C:\Users\Jinyang\Source\Repos\SimpleRFDS\SimpleRFDS.FileServer\bin\Debug\SimpleRFDS.FileServer.exe
+C:\Users\Jinyang\Source\Repos\SimpleRFDS\SimpleRFDS.FileServer\bin\Debug\SimpleRFDS.FileServer.pdb
+C:\Users\Jinyang\Source\Repos\SimpleRFDS\SimpleRFDS.FileServer\obj\Debug\SimpleRFDS.FileServer.csprojResolveAssemblyReference.cache
+C:\Users\Jinyang\Source\Repos\SimpleRFDS\SimpleRFDS.FileServer\obj\Debug\SimpleRFDS.FileServer.csproj.CoreCompileInputs.cache
+C:\Users\Jinyang\Source\Repos\SimpleRFDS\SimpleRFDS.FileServer\obj\Debug\SimpleRFDS.FileServer.exe
+C:\Users\Jinyang\Source\Repos\SimpleRFDS\SimpleRFDS.FileServer\obj\Debug\SimpleRFDS.FileServer.pdb

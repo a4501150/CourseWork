@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "DTD/xhtml1-transitional.dtd">
+<html>
+   <head>
+      <title>Login Page</title>
+      <style>
+         h1 {
+         text-transform: uppercase;
+         letter-spacing: 3px;
+         font-family: "Century Gothic", Times, serif;
+         }
+         div {
+         border-radius: 30px;
+         background-color: white;
+         border: 5px solid black;
+         padding bottom: 500px;
+         padding top: 50px;
+         float:center
+         width: 300px;
+         
+         margin: 200px;
+         text-align: justify;
+         }
+         td{
+         font-variant: small-caps;
+         font-weight: bold;
+         word-spacing: 5px;
+         font-family: "Century Gothic", Times, serif;
+         }
+         button{
+         font-family: "Century Gothic", Times, serif;
+         font-weight: bold;
+         }
+      </style>
+   </head>
+   <body>
+      <div>
+         <center>
+            <h1> Enter Your Billing Info </h1>
+            <form method = "post" action="../Checkout">
+               <table style="width:auto;" cellpadding='2' cellspacing='15'>
+                  <tr>
+                     <td>Name</td>
+                     <td><input type="TEXT" size="20" name="name"/></td>
+                  </tr>
+				  
+                  <tr>
+                     <td>Address</td>
+                     <td><input type="TEXT" size="20" name="address"/></td>
+                  </tr>
+				  
+				  <tr>
+                     <td>Credit Card</td>
+                     <td><input type="TEXT" size="20" name="creditcard"/></td>
+                  </tr>  
+				  
+				  <tr>
+                     <td>zipCode</td>
+                     <td><input type="TEXT" size="20" name="zipCode"/></td>
+                  </tr>  
+				  
+				   
+				  <tr>
+                     <td>Purchase Warranty?</td>
+                     <td><input type="checkbox" name="warranty" value="yes" checked> Yes<br></td>
+                  </tr>  
+				  
+                  <tr>
+                     <td colspan='2'>
+                        <center><input type = "submit" value = "SUBMIT" /></center>
+                     </td>
+                  </tr>
+               </table>
+            </form>
+         </center>
+      </div>
+   </body>
+</html>

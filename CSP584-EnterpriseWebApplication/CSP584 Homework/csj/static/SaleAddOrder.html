@@ -1,0 +1,84 @@
+<html>
+   <head>
+      <title>Add a new order for customer</title>
+      <style>
+         h1{
+         text-transform: uppercase;
+         letter-spacing: 3px;
+         font-family: "Century Gothic", Times, serif;
+         font-weight: bold;
+         }
+         div{
+         border-radius: 30px;
+         background-color: white;
+         border: 5px solid black;
+         padding bottom: 500px;
+         padding top: 100px;
+         float:center
+         width: 300px;
+         
+         margin: 200px;
+         text-align: justify;
+         }
+         td{
+         font-variant: small-caps;
+         font-weight: bold;
+         word-spacing: 5px;
+         font-family: "Century Gothic", Times, serif;
+         }
+         button{
+         font-family: "Century Gothic", Times, serif;
+         font-weight: bold;
+         }
+      </style>
+   </head>
+   <body>
+      <div>
+         <center>
+            <h1>Add a new order for customer</h1>
+            <form method = "post" action="OrderManager">
+               <table cellpadding='2' cellspacing='8'>
+			   
+			      <tr>
+                     <td>CustomerName</td>
+                     <td><input type="TEXT" size="20" name="username"></input></td>
+					 <input type="hidden" name="action" value="Add">
+                  </tr>
+                  <tr>
+                     <td>Product ID</td>
+                     <td><input type="TEXT" size="20" name="ProductID"></input></td>
+                  </tr>
+                  <tr>
+                     <td>Confirmation</td>
+                     <td><input type="TEXT" size="20" name="Confirmation"/></td>
+                  </tr>
+                  <tr>
+                     <td>Warranty</td>
+                     <td><input type="TEXT" size="20" name="Warranty"></input></td>
+                  </tr>
+				 <tr>
+                     <td>expectedDeliverDate</td>
+                     <td><input type="TEXT" size="20" name="expectedDeliverDate"></input></td>
+                  </tr>
+				  
+				 <tr>
+                     <td>orderPlaceDate</td>
+                     <td><input type="TEXT" size="20" name="orderPlaceDate"></input></td>
+                  </tr>
+				  
+				  <tr>
+                     <td>zipCode</td>
+                     <td><input type="TEXT" size="20" name="zipCode"/></td>
+                  </tr>  
+				  
+                  <tr>
+                     <td colspan='5'>
+                        <center> <input type = "submit" value = "SUBMIT" /></center>
+                     </td>
+                  </tr>
+               </table>
+            </form>
+         </center>
+      </div>
+   </body>
+</html>

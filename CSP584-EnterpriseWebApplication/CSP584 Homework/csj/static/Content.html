@@ -1,0 +1,84 @@
+<section id="content">
+   <article>
+      <h2>SmartPortables</h2>
+      <div class="article-info">Posted on 
+         <time datetime="2013-05-14">24 Sep</time> 
+         by 
+         <a href="#" rel="author">Jinyang Li</a>
+      </div>
+      <p>Welcome to SmartPortables, the best online device retailer in US.</p>
+	  
+	  
+	  
+	  
+   </article>
+   <article class="expanded">
+
+	<marquee scrollamount = "20" direction = "left" behavior = "alternate" loop = "10000">
+		<img src="images/Laptop.PNG" width = "960" height = "500"  alt="LapTop" />
+		<img src="images/BigSpeaker.PNG" width = "960" height = "500"  alt="BigSpeaker" />
+		<img src="images/ClassicWatch.PNG" width = "960" height = "500"  alt="ClassicWatch" />
+		<img src="images/HeadPhone.PNG" width = "960" height = "500"  alt="Headphone" />
+	</marquee>
+   
+   </article>
+   
+	<article>
+	<h2>We Beat Our Competitors in all aspects.</h2>
+	<h2>Price-Match Guaranteed!</h2>
+	<div id="twitter"></div>
+	</article>
+	
+	
+	<article>
+    <h2>Deal Matches</h2>
+	<div id="ownproduct"></div>
+	</article>
+	
+	<script>
+	
+	$(document).ready(function(){
+		getTwitter();
+		getMatches();
+	});
+	
+	function getTwitter(){
+	
+			$.get("DealMacthes?action=twitter", function(responseText) {     
+
+            if(responseText!="failed") {   
+					
+				$('#twitter').html(responseText);	
+					
+			} else {
+				alert("ajaxfaield")
+			}
+					
+            });
+	
+	
+	}
+	
+	function getMatches(){
+	
+			$.get("DealMacthes?action=ownproduct", function(responseText) {     
+
+            if(responseText!="failed") {   
+					
+				$('#ownproduct').html(responseText);	
+					
+			} else {
+				alert("ajaxfaield")
+			}
+					
+            });
+	
+	
+	}
+	
+	
+	</script>
+   
+   
+</section>
+<div class="clear"></div>

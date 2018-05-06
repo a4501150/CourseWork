@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Homework - 1 - SmartPortables</title>
+<link rel="stylesheet" href="static/styles.css" type="text/css" />
+<!-- <script src="static/main.js"></script> -->
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<!--
+spigot, a free CSS web template by ZyPOP (zypopwebtemplates.com/)
+
+Download: http://zypopwebtemplates.com/
+
+License: Creative Commons Attribution
+//-->
+</head>
+<body>
+<div id="container">
+    <header>
+    	<h1><a href="/csj">Smart<span>Portables</span></a></h1>
+        <h2>CSP 584 - Enterprise Web Applications - Howmwork #1</h2>
+    </header>
+
+
+	
+	<script>
+		
+		function doCompletion(){
+		
+			$.get("AjaxUtility?action=ajax&pattern="+$('#searchId').val(), function(responseText) {     
+
+            if(responseText!="failed") {   
+					
+				$('#complete-table').html(responseText);	
+					
+			} else {
+				alert("ajaxfaield, please login first")
+			}
+					
+            });
+		
+		
+		}
+		
+	</script>

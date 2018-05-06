@@ -1,0 +1,96 @@
+<html>
+   <head>
+      <title>Modify a product</title>
+      <style>
+         h1{
+         text-transform: uppercase;
+         letter-spacing: 3px;
+         font-family: "Century Gothic", Times, serif;
+         font-weight: bold;
+         }
+         div{
+         border-radius: 30px;
+         background-color: white;
+         border: 5px solid black;
+         padding bottom: 500px;
+         padding top: 100px;
+         float:center
+         width: 300px;
+         
+         margin: 200px;
+         text-align: justify;
+         }
+         td{
+         font-variant: small-caps;
+         font-weight: bold;
+         word-spacing: 5px;
+         font-family: "Century Gothic", Times, serif;
+         }
+         button{
+         font-family: "Century Gothic", Times, serif;
+         font-weight: bold;
+         }
+      </style>
+   </head>
+   <body>
+      <div>
+         <center>
+            <h1>Modify a product</h1>
+            <form method = "post" action="ProductManager">
+               <table cellpadding='2' cellspacing='8'>
+			   
+			      <tr>
+                     <td>Product Name</td>
+                     <td><input type="TEXT" size="20" name="Name"></input></td>
+					 <input type="hidden" name="action" value="ModifyProduct">
+                  </tr>
+				  
+				  <tr>
+                     <td>Product ID</td>
+                     <td><input type="TEXT" size="20" name="pid"></input></td>
+					 
+                  </tr>
+                  <tr>
+                     <td>price</td>
+                     <td><input type="TEXT" size="20" name="price"/></td>
+                  </tr>
+                  <tr>
+                     <td>Image address</td>
+                     <td><input type="TEXT" size="20" name="Image"></input></td>
+                  </tr>
+				 <tr>
+                     <td>Manufacturer</td>
+                     <td><input type="TEXT" size="20" name="Manufacturer"></input></td>
+                  </tr>
+				  
+				 <tr>
+                     <td>Condition</td>
+                     <td><input type="TEXT" size="20" name="Condition"></input></td>
+                  </tr>
+				  
+				  <tr>
+                     <td>catagory</td>
+                     <td><input type="TEXT" size="20" name="catagory"></input></td>
+                  </tr>
+				  
+				  <tr>
+                     <td>Discont</td>
+                     <td><input type="TEXT" size="20" name="Discont"></input></td>
+                  </tr>
+				  
+				 <tr>
+                     <td>Accessory, split them by -> , </td>
+                     <td><input type="TEXT" size="20" name="Accessory"></input></td>
+                  </tr>
+				  
+                  <tr>
+                     <td colspan='5'>
+                        <center> <input type = "submit" value = "SUBMIT" /></center>
+                     </td>
+                  </tr>
+               </table>
+            </form>
+         </center>
+      </div>
+   </body>
+</html>

@@ -1,0 +1,59 @@
+<project name="hw2" default="dist" basedir=".">
+  <description>
+    hw2 build
+  </description>
+  <!-- set global properties for this build -->
+  <property name="src" location="src"/>
+  <property name="build" location="build"/>
+  <property name="dist" location="dist"/>
+
+  <target name="init">
+    <!-- Create the time stamp -->
+    <tstamp/>
+    <!-- Create the build directory structure used by compile -->
+    <mkdir dir="${build}"/>
+  </target>
+
+  <target name="compile" depends="init"
+        description="compile the source">
+    <!-- Compile the java code from ${src} into ${build} -->
+    <javac srcdir="${src}" destdir="${build}"/>
+  </target>
+
+  <target name="dist" depends="compile"
+        description="generate the distribution">
+    <!-- Create the distribution directory -->
+    <mkdir dir="${dist}"/>
+
+    <!-- Put everything in ${build} into the .jar file -->
+    <jar jarfile="${dist}/hw2.jar" basedir="${build}"/>
+  </target>
+  
+  <target name="runServer" depends="compile"
+        description="run as Server">
+    <java classname="Server.ServerNode">
+       <classpath>
+           <pathelement location="./Build"/>
+        </classpath>
+    </java>
+  </target>
+  
+  
+  <target name="runClient" depends="compile"
+        description="run as Client">
+    <java classname="Client.Client">
+       <classpath>
+           <pathelement location="./Build"/>
+        </classpath>
+    </java>
+  </target>
+  
+
+  <target name="clean"
+        description="clean up">
+    <!-- Delete the ${build} and ${dist} directory trees -->
+    <delete dir="${build}"/>
+    <delete dir="${dist}"/>
+    <delete dir="DownLoadFromPeer" />
+  </target>
+</project>

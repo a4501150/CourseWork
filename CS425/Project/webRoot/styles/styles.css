@@ -1,0 +1,161 @@
+body,h1,h2,h3,p,quote,small,form,input,ul,li,ol,label{
+	/* The reset rules */
+	margin:0px;
+	padding:0px;
+}
+
+body{
+	color:#555555;
+	font-size:13px;
+	background: #eeeeee;
+	font-family:Arial, Helvetica, sans-serif;
+	width: 100%;
+}
+
+h1{
+	font-size:28px;
+	font-weight:bold;
+	font-family:"Trebuchet MS",Arial, Helvetica, sans-serif;
+	letter-spacing:1px;
+}
+
+h2{
+	font-family:"Arial Narrow",Arial,Helvetica,sans-serif;
+	font-size:10px;
+	font-weight:normal;
+	letter-spacing:1px;
+	padding-left:2px;
+	text-transform:uppercase;
+	white-space:nowrap;
+	margin-top:4px;
+	color:#888888;
+}
+
+h3{
+	font-family:"Arial", Arial,Helvetica,sans-serif; 
+	font-size:20px;
+	font-weight:normal;
+	margin-top:4px;
+	color:#888888;
+}
+
+
+#main p{
+	padding-bottom:8px;
+}
+
+.clear{
+	clear:both;
+}
+
+#main{
+	width:800px;
+	/* Centering it in the middle of the page */
+	margin:60px auto;
+}
+
+.container{
+	margin-top:20px;
+	
+	background:#FFFFFF;
+	border:1px solid #E0E0E0;
+	padding:15px;
+	
+	/* Rounded corners */
+	-moz-border-radius:20px;
+	-khtml-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	border-radius:20px;
+}
+
+.err{
+	color:red;
+}
+
+.success{
+	color:#00CC00;
+}
+
+a, a:visited {
+	color:#00BBFF;
+	text-decoration:none;
+	outline:none;
+}
+
+a:hover{
+	text-decoration:underline;
+}
+
+.tutorial-info{
+	text-align:center;
+	padding:10px;
+}
+
+fieldset{
+	border:0px;
+	border-top:1px solid #CCC;
+	padding:10px 0px 0px 0px;
+	margin:0px 0px 10px 0px;
+}
+
+label{
+	display:block;
+	float:left;
+	width:100px;
+	margin:0px;
+	padding:0px;
+	text-align:center;
+}
+
+.field {
+	display: block;
+	margin: 0px 0px 5px 0px;
+	padding:0px;
+}
+
+.newbutton {
+	padding:2px;
+	width:100px;
+	margin-left:50px;
+	margin-top:11px;
+}
+
+select{
+	margin:0;
+	padding:0;
+}
+
+table.search {
+	width:100%;
+	padding:0;
+	margin:0;
+}
+
+td.name {
+	width:40%;
+}
+
+td.loc {
+	width:20%;
+}
+
+td.rating {
+	width:20%;
+}
+
+td a {
+	font-size:8pt;
+}
+
+.stat {
+	width:100%;
+}
+
+.stat th {
+	text-align:left;
+	width:10%;
+}
+
+.stat td {
+	width:40%;
+}

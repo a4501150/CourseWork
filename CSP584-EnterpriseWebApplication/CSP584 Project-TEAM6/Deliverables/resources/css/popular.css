@@ -1,0 +1,353 @@
+/* 
+ * 	Sticky
+ */
+.admin-bar .is-sticky {
+	top: 32px !important;
+}
+.header-sticky .is-sticky {
+	top: 103px !important;
+}
+.admin-bar.header-sticky .is-sticky {
+	top: 135px !important;
+}
+
+/* 
+ * 	Core Owl Carousel CSS File
+ *	v1.3.3
+ */
+
+/* clearfix */
+.owl-carousel .owl-wrapper:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+/* display none until init */
+.owl-carousel {
+	display: none;
+	position: relative;
+	width: 100%;
+	-ms-touch-action: pan-y;
+}
+.portfolio-carousel {
+	position: relative;
+}
+.portfolio-carousel.style-2 .owl-carousel {
+	width: calc(100% - 100px);
+	width: -webkit-calc(100% - 100px);
+	width: -moz-calc(100% - 100px);
+}
+.owl-carousel.pagi-top, .owl-carousel.pagi-bottom {
+	overflow: visible;
+}
+.owl-carousel .owl-wrapper {
+	display: none;
+	position: relative;
+	-webkit-transform: translate3d(0px, 0px, 0px);
+}
+.owl-carousel .owl-wrapper-outer {
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+}
+.owl-carousel .owl-wrapper-outer.autoHeight {
+	-webkit-transition: height 500ms ease-in-out;
+	-moz-transition: height 500ms ease-in-out;
+	-ms-transition: height 500ms ease-in-out;
+	-o-transition: height 500ms ease-in-out;
+	transition: height 500ms ease-in-out;
+}	
+.owl-carousel .owl-item {
+	float: left;
+}
+.owl-carousel .owl-item > * {
+	margin-bottom: 0;
+	padding-bottom: 0;
+	width: 100%;
+}
+.owl-controls .owl-page,
+.owl-controls .owl-buttons div {
+	cursor: pointer;
+}
+.owl-controls {
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	text-align: center;
+}
+	/* Owl Nav */
+.owl-controls .owl-nav {
+	float: right;
+	position: absolute;
+	top: 40%;
+	right: 0;
+	width: 100%;
+}
+.owl-controls .owl-nav > div.owl-prev {
+	float: left;
+}
+.owl-controls .owl-nav > div.owl-next{
+	float: right;
+}
+.owl-controls .owl-nav > div > i {
+	width: 40px;
+	height: 40px;
+	line-height: 38px;
+	text-align: center;
+	background-color: #666666;
+	color: #fff;
+	/*border-radius: 100%;*/
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-ms-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+}
+.owl-controls .owl-nav > div > i:hover {
+	background: #283c5a;
+	color: #fff;
+	/*border-color: #3f51b5;*/
+}
+
+
+	/* Owl Dots */
+.owl-controls .owl-dots {
+	margin-top: 30px;
+}
+.owl-controls .owl-dots > div {
+	width: 70px;
+	height: 5px;
+	display: inline-block;
+	margin-left: 5px;
+	margin-right: 5px;
+	background: #c4c4c4;
+}
+.owl-controls .owl-dots > div.active {
+	background: #3f51b5;
+}
+
+	/* fix */
+.owl-carousel  .owl-wrapper,
+.owl-carousel  .owl-item {
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility:    hidden;
+	-ms-backface-visibility:     hidden;
+	-webkit-transform: translate3d(0,0,0);
+	-moz-transform: translate3d(0,0,0);
+	-ms-transform: translate3d(0,0,0);
+}
+
+	/* Styling Next and Prev buttons */
+.owl-theme .owl-buttons {
+	display: inline-block;
+	position: absolute;
+	text-align: center;
+	top: 0;
+	height: 100%;
+	right: 0px;
+	width: 100%;
+}
+.portfolio-carousel.style-2 .owl-theme .owl-buttons {
+	top: 50%;
+	right: -70px;
+	margin-top: -60px;
+}
+.owl-theme .owl-buttons > div {
+	/*border: 1px solid #c5c5c5;*/
+	/*border-radius: 100%;*/
+	display: inline-block;
+	height: 100%;
+	width: 20%;
+	/*line-height: 40px;*/
+	font-size: 125%;
+	color: #c5c5c5;
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-ms-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+}
+.k2t-event-gallery .owl-theme .owl-buttons > div.owl-prev > i {
+	top: 30%;
+    position: absolute;
+    left: 3%;
+}
+.k2t-event-gallery .owl-theme .owl-buttons > div.owl-next > i {
+	top: 30%;
+    position: absolute;
+    right: 3%;
+}
+.owl-theme .owl-buttons > div.owl-prev {
+	background-image: -webkit-linear-gradient(left,rgba(0,0,0,.5) 0,rgba(0,0,0,.0001) 100%);
+    background-image: -o-linear-gradient(left,rgba(0,0,0,.5) 0,rgba(0,0,0,.0001) 100%);
+    background-image: -webkit-gradient(linear,left top,right top,from(rgba(0,0,0,.5)),to(rgba(0,0,0,.0001)));
+    background-image: linear-gradient(to right,rgba(0,0,0,.5) 0,rgba(0,0,0,.0001) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
+    background-repeat: repeat-x;
+	float: left;
+}
+.owl-theme .owl-buttons > div.owl-next {
+	background-image: -webkit-linear-gradient(left,rgba(0,0,0,.0001) 0,rgba(0,0,0,.5) 100%);
+	background-image: -o-linear-gradient(left,rgba(0,0,0,.0001) 0,rgba(0,0,0,.5) 100%);
+	background-image: -webkit-gradient(linear,left top,right top,from(rgba(0,0,0,.0001)),to(rgba(0,0,0,.5)));
+	background-image: linear-gradient(to right,rgba(0,0,0,.0001) 0,rgba(0,0,0,.5) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
+	background-repeat: repeat-x;
+	float: right;
+}
+.owl-theme .owl-buttons > div.owl-next:hover,
+.owl-theme .owl-buttons > div.owl-prev:hover {
+	opacity: .9 !important;
+	display: block;
+}
+
+	/* style for post format */
+.format-gallery .owl-theme .owl-buttons {
+	right: 0;
+	top: 50%;
+	height: auto;
+	width: 100%;
+	transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+}
+.format-gallery .owl-theme .owl-buttons > div {
+	width: 50px;
+	height: 50px;
+	float: left;
+	margin: 0;
+    background: rgba(0,0,0,0.5);
+	border: 0;
+	color: #fff;
+	transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+}
+.format-gallery .owl-theme .owl-buttons > div i {
+	font-size: 18px;
+}
+.format-gallery .owl-theme .owl-buttons > div:last-child {
+	float: right;
+}
+.format-gallery .owl-theme .owl-buttons > div:hover {
+	color: yellow;
+}
+.format-gallery .owl-theme .owl-buttons > div > i {
+	line-height: 50px;
+}
+
+	/* Clickable class fix problem with hover on touch devices */
+	/* Use it for non-touch hover action */
+
+.owl-theme .owl-controls.clickable .owl-buttons div:hover {
+	filter: Alpha(Opacity=100);/*IE7 fix*/
+	opacity: 1;
+	text-decoration: none;
+}
+	/* Styling Pagination*/
+.owl-theme .owl-controls .owl-page {
+	display: inline-block;
+	zoom: 1;
+	*display: inline;/*IE7 life-saver */
+}
+.owl-theme .owl-controls .owl-page span {
+	display: block;
+	width: 10px;
+	height: 10px;
+	margin:0 10px;
+	background: #fff;	
+	opacity: 0.5;
+}
+.format-gallery .owl-theme .owl-pagination{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}
+.owl-theme .owl-controls .owl-page.active span,
+.owl-theme .owl-controls.clickable .owl-page:hover span {
+	background: #fff;
+	opacity: 1;
+	transition: all ease-in-out .3s;
+	-moz-transition: all ease-in-out .3s;
+	-ms-transition: all ease-in-out .3s;
+	-webkit-transition: all ease-in-out .3s;
+}
+.owl-theme .owl-controls .owl-page span.owl-numbers {
+	height: auto;
+	width: auto;
+	color: #FFF;
+	padding: 2px 10px;
+	font-size: 85%;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+}
+	/* Pagination Style 2 */
+.pagi-style-2.owl-theme .owl-controls .owl-page span {
+	width: 10px;
+	height: 10px;
+	background: #3d414b;
+	margin: 3px;
+}
+.pagi-style-2.owl-theme .owl-controls .owl-page.active span,
+.pagi-style-2.owl-theme .owl-controls.clickable .owl-page:hover span {
+	border: 2px solid #3f51b5;
+	background: none;
+}
+
+	/* Pagination postion */
+.pagi-top {
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+.pagi-top .owl-pagination {
+	margin-bottom: 0;
+	position: absolute;
+	top: -35px;
+	width: 100%;
+}
+.pagi-bottom {
+	margin-bottom: 42px;
+}
+.pagi-bottom .owl-pagination {
+	bottom: -32px;
+	position: absolute;
+	width: 100%;
+}
+.pagi-on_slider .owl-controls {
+	height: 0;
+}
+.pagi-on_slider .owl-pagination {
+	background: none repeat scroll 0 0 rgba(0, 0, 0, 0.6);
+	border-radius: 20px;
+	bottom: 45px;
+	display: inline-block;
+	height: 26px;
+	padding: 3px 7px 0;
+	position: relative;
+}
+.pagi-style-2.pagi-on_slider .owl-pagination {
+	height: 23px;
+}
+
+	/* Stretch */
+.owl-stretch.owl-carousel .owl-stage-outer {
+	width: 104%;
+	margin-left: -2%;
+	margin-right: -2%;
+	padding-left: 2%;
+	padding-right: 2%;
+}
+.owl-stretch.owl-carousel .owl-stage-outer > .owl-stage > .owl-item > * {
+	margin-bottom: 40px;
+}
+.owl-stretch.owl-controls .owl-dots {
+	margin-bottom: 10px;
+}
