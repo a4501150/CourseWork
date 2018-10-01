@@ -1,0 +1,464 @@
+options {
+  LOOKAHEAD=3;
+  MULTI=true;
+  VISITOR=true;
+  NODE_DEFAULT_VOID=false;
+  NODE_EXTENDS="MyNode";
+  DEBUG_PARSER=false;
+  FORCE_LA_CHECK=true;
+  STATIC=false;
+}
+
+PARSER_BEGIN(ssParser)
+
+package ast; import java.io.*; import parser.*;
+
+public class ssParser {
+  public static void main(String args[]) {
+    
+    ssParser t =null;
+    if(args.length>0){
+    	System.out.println("Begin To Parse file " + args[0]);
+        try {
+                t=new ssParser(new FileInputStream(new File(args[0])));
+                } catch (FileNotFoundException e) {
+                        e.printStackTrace();
+        }
+    }else{
+    	System.out.println("Begin To Parse standard input ");
+        t=new ssParser(System.in);
+    }
+    try {
+      SimpleNode n = t.Goal();
+      SymbolTableVisitor symbolTable=new SymbolTableVisitor();
+      n.jjtAccept(symbolTable,null);
+      n.jjtAccept(new TypeCheckVisitor(symbolTable.table),null);
+      
+      System.out.println("==========AST Print==========");
+      n.jjtAccept(new ssASTPrintVisitor(),null);
+      //n.dump("");
+      System.out.println("============================= \n AST print successful");
+    } catch (Exception e) {
+      System.out.println("Error encountered....");
+      System.out.println(e.getMessage());
+      e.printStackTrace();
+    }
+  }
+}
+
+PARSER_END(ssParser)
+
+
+/* WHITE SPACE */
+
+SKIP :
+{
+  " "
+| "\t"
+| "\n"
+| "\r"
+| "\f"
+}
+
+/* COMMENTS */
+
+MORE :
+{
+  "//" : IN_SINGLE_LINE_COMMENT
+|
+  <"/**" ~["/"]> { input_stream.backup(1); } : IN_FORMAL_COMMENT
+|
+  "/*" : IN_MULTI_LINE_COMMENT
+}
+
+<IN_SINGLE_LINE_COMMENT>
+SPECIAL_TOKEN :
+{
+  <SINGLE_LINE_COMMENT: "\n" | "\r" | "\r\n" > : DEFAULT
+}
+
+<IN_FORMAL_COMMENT>
+SPECIAL_TOKEN :
+{
+  <FORMAL_COMMENT: "*/" > : DEFAULT
+}
+
+<IN_MULTI_LINE_COMMENT>
+SPECIAL_TOKEN :
+{
+  <MULTI_LINE_COMMENT: "*/" > : DEFAULT
+}
+
+<IN_SINGLE_LINE_COMMENT,IN_FORMAL_COMMENT,IN_MULTI_LINE_COMMENT>
+MORE :
+{
+  < ~[] >
+}
+
+/* RESERVED WORDS AND LITERALS */
+
+TOKEN : /* LITERALS */
+{
+  < INTEGER_LITERAL:
+        <DECIMAL_LITERAL> (["l","L"])?
+      | <HEX_LITERAL> (["l","L"])?
+      | <OCTAL_LITERAL> (["l","L"])?
+  >
+|
+  < #DECIMAL_LITERAL: ["1"-"9"] (["0"-"9"])* >
+|
+  < #HEX_LITERAL: "0" ["x","X"] (["0"-"9","a"-"f","A"-"F"])+ >
+|
+  < #OCTAL_LITERAL: "0" (["0"-"7"])* >
+|
+  < FLOATING_POINT_LITERAL:
+        (["0"-"9"])+ "." (["0"-"9"])* (<EXPONENT>)? (["f","F","d","D"])?
+  >
+|
+  < #EXPONENT: ["e","E"] (["+","-"])? (["0"-"9"])+ >
+|
+  < CHARACTER_LITERAL:
+      "'"
+      (   (~["'","\\","\n","\r"])
+        | ("\\"
+            ( ["n","t","b","r","f","\\","'","\""]
+            | ["0"-"7"] ( ["0"-"7"] )?
+            | ["0"-"3"] ["0"-"7"] ["0"-"7"]
+            )
+          )
+      )
+      "'"
+  >
+|
+  < STRING_LITERAL:
+      "\""
+      (   (~["\"","\\","\n","\r"])
+        | ("\\"
+            ( ["n","t","b","r","f","\\","'","\""]
+            | ["0"-"7"] ( ["0"-"7"] )?
+            | ["0"-"3"] ["0"-"7"] ["0"-"7"]
+            )
+          )
+      )*
+      "\""
+  >
+}
+
+
+TOKEN : /* KEYWORDS */
+{
+  < CLASS: "class" >
+|
+  < PUBLIC: "public" >
+|
+  < STATIC: "static" >
+|
+  < VOID: "void" >
+|
+  < STRING: "String" >
+|
+  < EXTENDS: "extends" >
+|
+  < INT: "int" >
+|
+  < DOUBLE: "double" >
+|
+  < CHAR: "char" >
+|
+  < BOOLEAN: "boolean" >
+|
+  < IF: "if" >
+|
+  < WHILE: "while" >
+|
+  < ELSE: "else" >
+|
+  < TRUE: "true" >
+|
+  < FALSE: "false" >
+|
+  < NEW: "new" >
+|
+  < THIS: "this" >
+|
+  < RETURN: "return" >
+|
+  < MAIN: "main" >
+|
+  < LENGTH: "length" >
+
+}
+
+
+TOKEN : /* IDENTIFIERS */
+{
+  < IDENTIFIER: <LETTER> (<LETTER>|<DIGIT>)* >
+|
+  < #LETTER: ["_","a"-"z","A"-"Z"] >
+|
+  < #DIGIT: ["0"-"9"] >
+}
+
+
+SimpleNode Goal() : {}
+{
+  MainClass() ( ClassDeclaration() )* 
+  { return jjtThis; }
+}
+
+
+void MainClass() : {}
+{
+  <CLASS> Identifier() "{" 
+  <PUBLIC> <STATIC> <VOID> <MAIN> "(" <STRING> "[" "]" Identifier() ")" "{"
+	(Statement())? "}" 
+  "}"
+}
+
+void ClassDeclaration() : {}
+{
+	<CLASS> Identifier() ( <EXTENDS> Identifier() )? "{"
+		( VarDeclaration() )* ( MethodDeclaration() )* 
+	"}"
+}
+
+void VarDeclaration() : {}
+{
+	Type() Identifier() ";"
+|	Type() Identifier() AssignmentOperator() Expression() ";"
+	
+}
+
+void MethodDeclaration() : {}
+{
+	<PUBLIC> Type() Identifier() "(" ( Type() Identifier() ( "," Type() Identifier() )* )? ")" "{"  ( LOOKAHEAD(2) VarDeclaration() )* ( Statement() )*  ReturnExpression() ";" "}"
+}
+
+void ReturnExpression() : {}
+{
+	<RETURN> ( Expression() )?
+}
+
+void Type() : {}
+{
+LOOKAHEAD(2)
+ ( <INT> "[" "]" )	{ jjtThis.token = token; jjtThis.token.image = "int[]"; }
+ | ( <BOOLEAN> )	{ jjtThis.token = token; }
+ | ( <INT> ) 	{ jjtThis.token = token; }
+ | ( <DOUBLE> ) 	{ jjtThis.token = token; }
+ | ( <CHAR> ) 	{ jjtThis.token = token; }
+ | ( <STRING> ) 	{ jjtThis.token = token; }
+ | ( <VOID> ) 	{ jjtThis.token = token; }
+ | Identifier()
+}
+
+void Statement() #void : {}
+{
+ "{" ( Statement() )* "}" 
+ | IfStatement()
+ | WhileStatement()
+ | PrintStatement()
+ | EmptyStatement()
+ | VarDeclaration()
+ | LOOKAHEAD(2) Assignment()
+ | LOOKAHEAD(2) ArrayAssignment()
+}
+
+void EmptyStatement() :
+{}
+{
+  ";"
+}
+
+void Assignment() :
+{}
+{
+  Identifier() AssignmentOperator() Expression() ";" 
+}
+
+void ArrayAssignment() :
+{}
+{
+  Identifier() "[" Expression() "]" AssignmentOperator() Expression() ";" 
+}
+
+
+void AssignmentOperator() : {}
+{
+ ( "=" | "*=" | "/=" | "%=" | "+=" | "-=" | "<<=" | ">>=" | ">>>=" | "&=" | "^=" | "|=" )
+  { jjtThis.token = token; }
+}
+
+
+void IfStatement() : {}
+{
+	<IF> "(" Expression() ")" Statement()  ( LOOKAHEAD(<ELSE>) <ELSE> Statement() )?
+}
+
+void WhileStatement() : {}
+{
+	<WHILE> "(" Expression() ")" Statement() 
+}
+
+void PrintStatement() : {}
+{
+	"System.out.println" "(" Expression() ")" ";" 
+}
+
+
+
+void Expression() #void :
+{}
+{
+  RelationalExpression()
+}
+
+
+void RelationalExpression() #void :
+{}
+{
+ (
+  ArrayExpression() ( LOOKAHEAD(1) RelationalOperator() ArrayExpression() )*
+ )  #RelationalExpression(>1)
+}
+
+void RelationalOperator() : {}
+{
+	( "<" | ">" | "<=" | ">=" | "==" | "!=" )
+	{ jjtThis.token = token; }
+}
+
+
+void ArrayExpression() #void :
+{}
+{
+ (
+  CallExpression() ( LOOKAHEAD(2) "[" CallExpression() "]" )*
+ )  #ArrayExpression(>1)
+}
+
+void CallExpression() #void :
+{}
+{
+ (
+  AdditiveExpression() ( "." Identifier() "(" ExpList() ")" )*
+ )  #CallNode(>1)
+ |
+ (
+  Identifier() ( "." Identifier() "(" ExpList() ")" )+
+ )  #CallNode(>1)
+
+}
+
+void AdditiveExpression() #void :
+{}
+{
+  MultiplicativeExpression() ( ( "+" | "-" ) MultiplicativeExpression() #AddNode(2) )*
+}
+
+void MultiplicativeExpression() #void :
+{}
+{
+  UnaryExpression() ( ["*" | "/" | "%"]  UnaryExpression() #MultiNode(2) )* 
+}
+
+
+void UnaryExpression() #void : {Token t; }
+{
+ IntegerLiteral()
+ | BooleanLiteral() 
+ | DoubleLiteral()
+ | CharLiteral()
+ | StringLiteral()
+ | LengthExpression()
+ | ThisLiteral()
+ | LOOKAHEAD(2) NewIntArrayExpression()
+ | LOOKAHEAD(2) NewClassExpression()
+ | NegtiveExpression()
+ | "(" Expression() ")" 
+}
+
+void LengthExpression() #void :{}
+{
+  LOOKAHEAD( Identifier() "." )
+  ( Identifier() ( "." <LENGTH> )+ ) #LengthNode
+  | Identifier()
+}
+
+
+void NewClassExpression() #NewClassNode :{}
+{
+  <NEW> Identifier() "(" ")"
+}
+
+
+void NewIntArrayExpression() #NewIntArrayNode :{}
+{
+  <NEW> <INT> "[" Expression() "]" 
+}
+
+void NegtiveExpression() #NegNode :{}
+{
+  "!" Expression() 
+}
+
+void ThisLiteral() #void :{}
+{
+  <THIS> #ThisNode
+}
+
+void IntegerLiteral() #void :{Token t;}
+{
+ (t=<INTEGER_LITERAL>
+    {
+       jjtThis.token = t;
+    }
+ )#IntConstNode
+}
+
+void DoubleLiteral() #void :{Token t;}
+{
+ (t=<FLOATING_POINT_LITERAL>
+    {
+       jjtThis.token = t;
+    }
+ )#DoubleNode
+}
+
+void CharLiteral() #void :{Token t;}
+{
+ (t=<CHARACTER_LITERAL>
+    {
+       jjtThis.token = t;
+    }
+ )#CharNode
+}
+
+void StringLiteral() #void :{Token t;}
+{
+ (t=<STRING_LITERAL>
+    {
+       jjtThis.token = t;
+    }
+ )#StringNode
+}
+
+void BooleanLiteral() #void :{}
+{
+  <TRUE> #TrueNode
+|
+  <FALSE> #FalseNode
+}
+
+
+void ExpList() : {}
+{
+	( Expression() ( "," Expression() )* )?
+}
+
+
+void Identifier() : {Token t; }
+{
+	t = <IDENTIFIER> 
+	{ jjtThis.token = t; }
+}
